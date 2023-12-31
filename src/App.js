@@ -1,6 +1,6 @@
 import './App.css';
 import AppSkeleton from './pages/AppSkeleton';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
