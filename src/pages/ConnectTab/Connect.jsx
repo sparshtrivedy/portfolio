@@ -100,23 +100,23 @@ export default function Connect() {
                 message: 'Please fill out all required fields',
                 severity: 'error'
             });
-            setTimeout(() => {setResult(null)}, 5000);
+            setTimeout(() => {setResult(null)}, 6000);
             setLoading(false);
         } else {
             await axios.post("https://api.emailjs.com/api/v1.0/email/send", data).then((response) => {
                 setLoading(false);
                 setResult({
-                    message: response.data.message,
+                    message: 'Your message has been sent!',
                     severity: 'success'
                 });
-                setTimeout(() => {setResult(null)}, 5000);
+                setTimeout(() => {setResult(null)}, 6000);
             }).catch((error) => {
                 setLoading(false);
                 setResult({
-                    message: error.data,
+                    message: 'There was an error sending your message. Please try again later.',
                     severity: 'error'
                 });
-                setTimeout(() => {setResult(null)}, 5000);
+                setTimeout(() => {setResult(null)}, 6000);
             });
         }
         setIsError(prevState => ({ ...prevState, ...newIsError }));

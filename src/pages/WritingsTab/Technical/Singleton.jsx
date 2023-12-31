@@ -5,6 +5,7 @@ import {
     Grid,
     Paper,
     Typography,
+    Box
 } from "@mui/material";
 import sparsh from '../../../assets/images/sparsh.jpg';
 import singleton from '../../../assets/writings/singleton.png';
@@ -16,12 +17,14 @@ export default function Singleton() {
             <Grid item xs={8}>
                 <Paper elevation={3} sx={{padding: 4}}>
                     <Typography variant={'subtitle2'}>26.12.2023</Typography>
+                    <Divider sx={{mt: 2}}/>
                     <Typography variant={'h1'}>Singleton Design Pattern</Typography>
                     <Typography variant={'subtitle1'} mb={2}>Answering how, when, why and why not to use the singleton design pattern</Typography>
-                    <div style={{display: 'flex', alignItems: 'center'}}>
-                        <Avatar alt={'Sparsh Trivedy'} src={sparsh} sx={{marginRight: 2, marginBottom: 2}} />
+                    <Divider sx={{mb: 2}}/>
+                    <Box sx={{display: 'flex', alignItems: 'center', mb: 2}}>
+                        <Avatar alt={'Sparsh Trivedy'} src={sparsh} sx={{marginRight: 2}} />
                         <Typography variant={'subtitle2'}>Sparsh Trivedy</Typography>
-                    </div>
+                    </Box>
                     <Divider />
                     <img src={singleton} alt={'Singleton Design Pattern'} style={{marginTop: '20px'}} />
                     <div style={{margin: '40px 0'}}>

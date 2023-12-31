@@ -12,10 +12,14 @@ import {
     CardMedia,
     CardActions,
     Button,
+    Snackbar,
+    Alert,
 } from "@mui/material";
+import { FileOpenOutlined, InventoryOutlined, ShareOutlined } from "@mui/icons-material";
 import singleton from '../../assets/writings/singleton.png'
 import strategy from '../../assets/writings/strategy.png'
 import codecomments from '../../assets/writings/codecomments.png'
+import callbacks from '../../assets/writings/callbacks.jpg'
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -55,12 +59,39 @@ export default function Writings() {
 
     const [checked, setChecked] = React.useState(false);
     const [value, setValue] = React.useState(0);
+    const [openSnackbar, setOpenSnackbar] = React.useState(false);
 
     React.useEffect(() => {setChecked(true)}, []);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+        setOpenSnackbar(false);
+    };
+
+    const copyToClipboard = async (e) => {
+        let url = "https://www.sparshtrivedy.com/#/writings"
+        if (e.target.id === 'comments') {
+            url = "https://www.sparshtrivedy.com/#/writings/comments"
+        } else if (e.target.id === 'strategy') {
+            url = "https://www.sparshtrivedy.com/#/writings/strategy"
+        } else if (e.target.id === 'singleton') {
+            url = "https://www.sparshtrivedy.com/#/writings/singleton"
+        }
+
+        await navigator.clipboard.writeText(url)
+        .then(() => {
+            setOpenSnackbar(true);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+    }
 
     return (
         <div style={{backgroundColor: '#f8fafd', margin: 0}}>
@@ -105,8 +136,14 @@ export default function Writings() {
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{marginBottom: 2}}>
-                                <Button disabled size="small" href="/#/writings/singleton">Share</Button>
-                                <Button size="small" href="/#/writings/singleton">Read</Button>
+                                <Button size="small" onClick={copyToClipboard} id="singleton" sx={{mr: 2}}>
+                                    <ShareOutlined sx={{mr: 1}} />
+                                    Share
+                                </Button>
+                                <Button size="small" href="/#/writings/singleton">
+                                    <FileOpenOutlined sx={{mr: 1}} />
+                                    Read
+                                </Button>
                             </CardActions>
                         </Card>
                         <Card sx={{ maxWidth: 500, borderRadius: '20px', mb: 2 }}>
@@ -124,8 +161,14 @@ export default function Writings() {
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{marginBottom: 2}}>
-                                <Button disabled size="small" href="/#/writings/strategy">Share</Button>
-                                <Button size="small" href="/#/writings/strategy">Read</Button>
+                            <Button size="small" onClick={copyToClipboard} id="strategy" sx={{mr: 2}}>
+                                    <ShareOutlined sx={{mr: 1}} />
+                                    Share
+                                </Button>
+                                <Button size="small" href="/#/writings/strategy">
+                                    <FileOpenOutlined sx={{mr: 1}} />
+                                    Read
+                                </Button>
                             </CardActions>
                         </Card>
                         <Card sx={{ maxWidth: 500, borderRadius: '20px', mb: 2 }}>
@@ -143,8 +186,39 @@ export default function Writings() {
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{marginBottom: 2}}>
-                                <Button disabled size="small" href="/#/writings/comments">Share</Button>
-                                <Button size="small" href="/#/writings/comments">Read</Button>
+                            <Button size="small" onClick={copyToClipboard} id="comments" sx={{mr: 2}}>
+                                    <ShareOutlined sx={{mr: 1}} />
+                                    Share
+                                </Button>
+                                <Button size="small" href="/#/writings/comments">
+                                    <FileOpenOutlined sx={{mr: 1}} />
+                                    Read
+                                </Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ width: 500, borderRadius: '20px', mb: 2 }}>
+                            <CardMedia
+                                sx={{ height: 340 }}
+                                image={callbacks}
+                                title="code comments"
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Callbacks
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Coming soon...
+                                </Typography>
+                            </CardContent>
+                            <CardActions sx={{marginBottom: 2}}>
+                            <Button disabled size="small" onClick={copyToClipboard} id="callbacks" sx={{mr: 2}}>
+                                    <ShareOutlined sx={{mr: 1}} />
+                                    Share
+                                </Button>
+                                <Button disabled size="small" href="/#/writings/callbacks">
+                                    <FileOpenOutlined sx={{mr: 1}} />
+                                    Read
+                                </Button>
                             </CardActions>
                         </Card>
                     </div>
@@ -153,6 +227,11 @@ export default function Writings() {
                     Coming soon...
                 </CustomTabPanel>
             </Box>
+            <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{vertical: 'top', horizontal: 'center'}}>
+                <Alert icon={<InventoryOutlined />} severity="success" onClose={handleClose} sx={{ width: '100%' }}>
+                    Copied to clipboard!
+                </Alert>
+            </Snackbar>
         </div>
     );
 }
