@@ -272,7 +272,7 @@ export default function Connect() {
                             </Alert>
                             <List>
                                 <ListItem disablePadding>
-                                    <ListItemButton sx={{padding: 2}}>
+                                    <ListItemButton sx={{padding: 2}} href="mailto:sparsh.trivedy2140@gmail.com">
                                         <ListItemIcon>
                                             <AlternateEmail />
                                         </ListItemIcon>
@@ -280,7 +280,7 @@ export default function Connect() {
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem disablePadding>
-                                    <ListItemButton sx={{padding: 2}}>
+                                    <ListItemButton sx={{padding: 2}} href="https://www.linkedin.com/in/sparshtrivedy/">
                                         <ListItemIcon>
                                             <LinkedIn />
                                         </ListItemIcon>
@@ -288,7 +288,7 @@ export default function Connect() {
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem disablePadding>
-                                    <ListItemButton sx={{padding: 2}}>
+                                    <ListItemButton sx={{padding: 2}} href="https://github.com/sparshtrivedy">
                                         <ListItemIcon>
                                             <GitHub />
                                         </ListItemIcon>
@@ -296,7 +296,7 @@ export default function Connect() {
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem disablePadding>
-                                    <ListItemButton sx={{padding: 2}}>
+                                    <ListItemButton sx={{padding: 2}} href="https://www.instagram.com/sparshtrivedy/">
                                         <ListItemIcon>
                                             <Instagram />
                                         </ListItemIcon>
@@ -304,7 +304,7 @@ export default function Connect() {
                                     </ListItemButton>
                                 </ListItem>
                                 <ListItem disablePadding>
-                                    <ListItemButton sx={{padding: 2}}>
+                                    <ListItemButton sx={{padding: 2}} disabled>
                                         <ListItemIcon>
                                             <ContactPage />
                                         </ListItemIcon>
