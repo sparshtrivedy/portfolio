@@ -105,8 +105,8 @@ export default function Writings() {
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{marginBottom: 2}}>
-                                <Button disabled size="small" href="/#/writings/singleton">Share</Button>
-                                <Button size="small" href="/#/writings/singleton">Read</Button>
+                                <Button disabled size="small" href="/portfolio/#/writings/singleton">Share</Button>
+                                <Button size="small" href="/portfolio/#/writings/singleton">Read</Button>
                             </CardActions>
                         </Card>
                         <Card sx={{ maxWidth: 500, borderRadius: '20px', mb: 2 }}>
@@ -124,8 +124,8 @@ export default function Writings() {
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{marginBottom: 2}}>
-                                <Button disabled size="small" href="/#/writings/strategy">Share</Button>
-                                <Button size="small" href="/#/writings/strategy">Read</Button>
+                                <Button disabled size="small" href="/portfolio/#/writings/strategy">Share</Button>
+                                <Button size="small" href="/portfolio/#/writings/strategy">Read</Button>
                             </CardActions>
                         </Card>
                         <Card sx={{ maxWidth: 500, borderRadius: '20px', mb: 2 }}>
@@ -143,8 +143,8 @@ export default function Writings() {
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{marginBottom: 2}}>
-                                <Button disabled size="small" href="/#/writings/comments">Share</Button>
-                                <Button size="small" href="/#/writings/comments">Read</Button>
+                                <Button disabled size="small" href="/portfolio/#/writings/comments">Share</Button>
+                                <Button size="small" href="/portfolio/#/writings/comments">Read</Button>
                             </CardActions>
                         </Card>
                     </div>

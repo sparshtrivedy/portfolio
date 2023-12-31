@@ -16,19 +16,19 @@ const skills = {
             demonstrated: [
                 {
                     name: 'PlayBook',
-                    link: '/#projects/#playbook'
+                    link: '/portfolio/#/projects/#playbook'
                 },
                 {
                     name: 'Get-it-together',
-                    link: '/#projects/#getittogether'
+                    link: '/portfolio/#/projects/#getittogether'
                 },
                 {
                     name: 'Vibing',
-                    link: '/#projects/#vibing'
+                    link: '/portfolio/#/projects/#vibing'
                 },
                 {
                     name: 'UBC Faculty of Forestry',
-                    link: '/#experience/#forestry-web-dev'
+                    link: '/portfolio/#/experience/#forestry-web-dev'
                 }
             ]
         },
@@ -38,11 +38,11 @@ const skills = {
             demonstrated: [
                 {
                     name: 'WoodWorks',
-                    link: '/#projects/#woodworks'
+                    link: '/portfolio/#/projects/#woodworks'
                 },
                 {
                     name: 'BGC Engineering',
-                    link: '/#experience/#bgc-software-dev'
+                    link: '/portfolio/#/experience/#bgc-software-dev'
                 }
             ]
         },
@@ -52,11 +52,11 @@ const skills = {
             demonstrated: [
                 {
                     name: 'UBC CS Department',
-                    link: '/#experience/#ubc-cs-ta'
+                    link: '/portfolio/#/experience/#ubc-cs-ta'
                 },
                 {
                     name: 'UBC Faculty of Forestry',
-                    link: '/#experience/#forestry-web-dev'
+                    link: '/portfolio/#/experience/#forestry-web-dev'
                 }
             ]
         },
@@ -66,7 +66,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'Cafe Kiosk',
-                    link: '/#projects/#cafe-kiosk'
+                    link: '/portfolio/#/projects/#cafe-kiosk'
                 }
             ]
         },
@@ -76,11 +76,11 @@ const skills = {
             demonstrated: [
                 {
                     name: 'WoodWorks',
-                    link: '/#projects/#woodworks'
+                    link: '/portfolio/#/projects/#woodworks'
                 },
                 {
                     name: 'BGC Engineering',
-                    link: '/#experience/#bgc-software-dev'
+                    link: '/portfolio/#/experience/#bgc-software-dev'
                 }
             ]
         },
@@ -90,7 +90,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'Image Partitioning Trees',
-                    link: '/#projects/#image-partitioning-trees'
+                    link: '/portfolio/#/projects/#image-partitioning-trees'
                 }
             ]
         },
@@ -100,7 +100,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'UBC courses',
-                    link: '/#education'
+                    link: '/portfolio/#/education'
                 }
             ]
         }
@@ -112,11 +112,11 @@ const skills = {
             demonstrated: [
                 {
                     name: 'PlayBook',
-                    link: '/#projects/#playbook'
+                    link: '/portfolio/#/projects/#playbook'
                 },
                 {
                     name: 'Get-it-together',
-                    link: '/#projects/#getittogether'
+                    link: '/portfolio/#/projects/#getittogether'
                 }
             ]
         },
@@ -126,11 +126,11 @@ const skills = {
             demonstrated: [
                 {
                     name: 'PlayBook',
-                    link: '/#projects/#playbook'
+                    link: '/portfolio/#/projects/#playbook'
                 },
                 {
                     name: 'Get-it-together',
-                    link: '/#projects/#getittogether'
+                    link: '/portfolio/#/projects/#getittogether'
                 }
             ]
         },
@@ -140,11 +140,11 @@ const skills = {
             demonstrated: [
                 {
                     name: 'WoodWorks',
-                    link: '/#projects/#woodworks'
+                    link: '/portfolio/#/projects/#woodworks'
                 },
                 {
                     name: 'BGC Engineering',
-                    link: '/#experience/#bgc-software-dev'
+                    link: '/portfolio/#/experience/#bgc-software-dev'
                 }
             ]
         },
@@ -154,7 +154,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'UBC Faculty of Forestry',
-                    link: '/#experience/#forestry-web-dev'
+                    link: '/portfolio/#/experience/#forestry-web-dev'
                 }
             ]
         }
@@ -166,27 +166,27 @@ const skills = {
             demonstrated: [
                 {
                     name: 'PlayBook',
-                    link: '/#projects/#playbook'
+                    link: '/portfolio/#/projects/#playbook'
                 },
                 {
                     name: 'Get-it-together',
-                    link: '/#projects/#getittogether'
+                    link: '/portfolio/#/projects/#getittogether'
                 },
                 {
                     name: 'WoodWorks',
-                    link: '/#projects/#woodworks'
+                    link: '/portfolio/#/projects/#woodworks'
                 },
                 {
                     name: 'Vibing',
-                    link: '/#projects/#vibing'
+                    link: '/portfolio/#/projects/#vibing'
                 },
                 {
                     name: 'UBC Faculty of Forestry',
-                    link: '/#experience/#forestry-web-dev'
+                    link: '/portfolio/#/experience/#forestry-web-dev'
                 },
                 {
                     name: 'BGC Engineering',
-                    link: '/#experience/#bgc-software-dev'
+                    link: '/portfolio/#/experience/#bgc-software-dev'
                 }
             ]
         },
@@ -196,27 +196,27 @@ const skills = {
             demonstrated: [
                 {
                     name: 'PlayBook',
-                    link: '/#projects/#playbook'
+                    link: '/portfolio/#/projects/#playbook'
                 },
                 {
                     name: 'Get-it-together',
-                    link: '/#projects/#getittogether'
+                    link: '/portfolio/#/projects/#getittogether'
                 },
                 {
                     name: 'WoodWorks',
-                    link: '/#projects/#woodworks'
+                    link: '/portfolio/#/projects/#woodworks'
                 },
                 {
                     name: 'Vibing',
-                    link: '/#projects/#vibing'
+                    link: '/portfolio/#/projects/#vibing'
                 },
                 {
                     name: 'UBC Faculty of Forestry',
-                    link: '/#experience/#forestry-web-dev'
+                    link: '/portfolio/#/experience/#forestry-web-dev'
                 },
                 {
                     name: 'BGC Engineering',
-                    link: '/#experience/#bgc-software-dev'
+                    link: '/portfolio/#/experience/#bgc-software-dev'
                 }
             ]
         },
@@ -226,23 +226,23 @@ const skills = {
             demonstrated: [
                 {
                     name: 'PlayBook',
-                    link: '/#projects/#playbook'
+                    link: '/portfolio/#/projects/#playbook'
                 },
                 {
                     name: 'Get-it-together',
-                    link: '/#projects/#getittogether'
+                    link: '/portfolio/#/projects/#getittogether'
                 },
                 {
                     name: 'WoodWorks',
-                    link: '/#projects/#woodworks'
+                    link: '/portfolio/#/projects/#woodworks'
                 },
                 {
                     name: 'Vibing',
-                    link: '/#projects/#vibing'
+                    link: '/portfolio/#/projects/#vibing'
                 },
                 {
                     name: 'BGC Engineering',
-                    link: '/#experience/#bgc-software-dev'
+                    link: '/portfolio/#/experience/#bgc-software-dev'
                 }
             ]
         }
@@ -254,7 +254,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'BGC Engineering',
-                    link: '/#experience/#bgc-software-dev'
+                    link: '/portfolio/#/experience/#bgc-software-dev'
                 }
             ]
         },
@@ -264,11 +264,11 @@ const skills = {
             demonstrated: [
                 {
                     name: 'PlayBook',
-                    link: '/#projects/#playbook'
+                    link: '/portfolio/#/projects/#playbook'
                 },
                 {
                     name: 'WoodWorks',
-                    link: '/#projects/#woodworks'
+                    link: '/portfolio/#/projects/#woodworks'
                 }
             ]
         },
@@ -278,7 +278,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'UBC Faculty of Forestry',
-                    link: '/#experience/#forestry-web-dev'
+                    link: '/portfolio/#/experience/#forestry-web-dev'
                 }
             ]
         },
@@ -288,7 +288,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'Get-it-together',
-                    link: '/#projects/#getittogether'
+                    link: '/portfolio/#/projects/#getittogether'
                 }
             ]
         }
@@ -300,7 +300,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'Notes REST API',
-                    link: '/#projects/#notesapi'
+                    link: '/portfolio/#/projects/#notesapi'
                 }
             ]
         }
@@ -312,7 +312,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'UBC CS Department',
-                    link: '/#experience/#ubc-cs-ta'
+                    link: '/portfolio/#/experience/#ubc-cs-ta'
                 }
             ]
         },
@@ -322,7 +322,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'UBC CS Department',
-                    link: '/#experience/#ubc-cs-ta'
+                    link: '/portfolio/#/experience/#ubc-cs-ta'
                 }
             ]
         },
@@ -332,7 +332,7 @@ const skills = {
             demonstrated: [
                 {
                     name: 'UBC CS Department',
-                    link: '/#experience/#ubc-cs-ta'
+                    link: '/portfolio/#/experience/#ubc-cs-ta'
                 }
             ]
         }
