@@ -38,8 +38,6 @@ const idMap = {
     'message': 'a message'
 }
 
-const apiUrl = process.env.NODE_ENV === "production" ? "api/v1/send-email" : "http://localhost:5000/api/v1/send-email";
-
 const requiredIds = ['firstname', 'lastname', 'email', 'message'];
 
 export default function Connect() {
@@ -74,6 +72,21 @@ export default function Connect() {
         const newIsError = {};
         const newErrors = {};
 
+        const data = {
+            service_id: process.env.REACT_APP_SERVICE_ID,
+            template_id: process.env.REACT_APP_TEMPLATE_ID,
+            user_id: process.env.REACT_APP_USER_ID,
+            template_params: {
+                firstname: document.getElementById('firstname').value,
+                lastname: document.getElementById('lastname').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                pronouns: document.getElementById('pronouns').value,
+                linkedin: document.getElementById('linkedin').value,
+                message: document.getElementById('message').value
+            }
+        }
+
         for (const id of requiredIds) {
             const element = document.getElementById(id);
             if (element === null || element.value.trim() === '') {
@@ -90,15 +103,7 @@ export default function Connect() {
             setTimeout(() => {setResult(null)}, 5000);
             setLoading(false);
         } else {
-            await axios.post(apiUrl, {
-                firstname: document.getElementById('firstname').value,
-                lastname: document.getElementById('lastname').value,
-                email: document.getElementById('email').value,
-                company: document.getElementById('company').value,
-                pronouns: document.getElementById('pronouns').value,
-                linkedin: document.getElementById('linkedin').value,
-                message: document.getElementById('message').value
-            }).then((response) => {
+            await axios.post("https://api.emailjs.com/api/v1.0/email/send", data).then((response) => {
                 setLoading(false);
                 setResult({
                     message: response.data.message,
@@ -108,7 +113,7 @@ export default function Connect() {
             }).catch((error) => {
                 setLoading(false);
                 setResult({
-                    message: error.data.message,
+                    message: error.data,
                     severity: 'error'
                 });
                 setTimeout(() => {setResult(null)}, 5000);
