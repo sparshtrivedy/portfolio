@@ -3,7 +3,8 @@ import {
     Typography, 
     Avatar, 
     Paper, 
-    Fade 
+    Fade,
+    Box
 } from '@mui/material';
 import sparsh from '../../assets/sparsh-out.jpeg';
 
@@ -17,7 +18,7 @@ export default function TitleCard()  {
     }, []);
     
     return (
-        <div style={{backgroundColor: '#f8fafd', height: '100%', margin: 0, padding: 0}}>
+        <Box sx={{bgcolor: 'background.main', height: '100%', margin: 0, padding: 0}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -33,12 +34,12 @@ export default function TitleCard()  {
                 }}
             >
                 <Avatar alt="Sparsh Trivedy" src={sparsh} sx={{ width: '40vh', height: '40vh', marginBottom: '3vh' }} />
-                <Typography variant='h5' sx={{fontWeight: 500}}>Hello, I am</Typography>
+                <Typography variant='h5' sx={{fontWeight: 500, color: '#212121'}}>Hello, I am</Typography>
                 <Fade in={checked} timeout={1000}>
-                    <Typography variant='h1' sx={{fontWeight: 500, textAlign: 'center'}}>Sparsh Trivedy</Typography>
+                    <Typography variant='h1' sx={{fontWeight: 500, textAlign: 'center', color: '#212121'}}>Sparsh Trivedy</Typography>
                 </Fade>
-                <Typography variant='h5' sx={{fontWeight: 500}}>I am a software developer</Typography>
+                <Typography variant='h5' sx={{fontWeight: 500, color: '#212121'}}>I am a software developer</Typography>
             </Paper>
-        </div>
+        </Box>
     );
 }

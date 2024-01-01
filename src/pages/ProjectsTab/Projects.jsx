@@ -16,7 +16,7 @@ export default function Projects() {
     React.useEffect(() => {setChecked(true)}, []);
     
     return (
-        <div style={{backgroundColor: '#f8fafd', margin: 0}}>
+        <Box sx={{bgcolor: 'background.main', margin: 0}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -31,7 +31,7 @@ export default function Projects() {
                     margin: 2
                 }}
             >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500}}>Projects</Typography></Fade>
+                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Projects</Typography></Fade>
             </Paper>
             <Box sx={{margin: 2, marginRight: 0}}>
                 <Grid container spacing={2} sx={{height: '100%', width: '100%', display: 'flex', pb: 2}}>
@@ -40,6 +40,6 @@ export default function Projects() {
                 </Grid>
                 </Grid>
             </Box>
-        </div>
+        </Box>
     );
 }

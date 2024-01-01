@@ -5,7 +5,6 @@ html, body, #root, .App {
 }
   
 .App {
-    background-color: #f8fafd;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

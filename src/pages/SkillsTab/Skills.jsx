@@ -72,7 +72,7 @@ export default function Skills() {
     };
 
     return (
-        <Box style={{backgroundColor: '#f8fafd', margin: 0}}>
+        <Box sx={{bgcolor: 'background.main', margin: 0}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -87,7 +87,7 @@ export default function Skills() {
                     margin: 2,
                 }}
             >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500}}>Skills</Typography></Fade>
+                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Skills</Typography></Fade>
             </Paper>
             <Box sx={{margin: 2}}>
                 <Box sx={{ borderBottom: 1, minWidth: '100%', borderColor: 'divider'}}>
@@ -118,7 +118,7 @@ export default function Skills() {
                                     height="140"
                                     image={language.img}
                                 />
-                                <CardContent sx={{bgcolor:'#f3f6fc', height: '100%'}}>
+                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {language.name}
                                     </Typography>
@@ -147,7 +147,7 @@ export default function Skills() {
                                     height="140"
                                     image={framework.img}
                                 />
-                                <CardContent sx={{bgcolor:'#f3f6fc', height: '100%'}}>
+                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {framework.name}
                                     </Typography>
@@ -176,7 +176,7 @@ export default function Skills() {
                                     height="140"
                                     image={language.img}
                                 />
-                                <CardContent sx={{bgcolor:'#f3f6fc', height: '100%'}}>
+                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {language.name}
                                     </Typography>
@@ -205,7 +205,7 @@ export default function Skills() {
                                     height="140"
                                     image={dbms.img}
                                 />
-                                <CardContent sx={{bgcolor:'#f3f6fc', height: '100%'}}>
+                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {dbms.name}
                                     </Typography>
@@ -234,7 +234,7 @@ export default function Skills() {
                                     height="140"
                                     image={platform.img}
                                 />
-                                <CardContent sx={{bgcolor:'#f3f6fc', height: '100%'}}>
+                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {platform.name}
                                     </Typography>
@@ -263,7 +263,7 @@ export default function Skills() {
                                     height="140"
                                     image={library.img}
                                 />
-                                <CardContent sx={{bgcolor:'#f3f6fc', height: '100%'}}>
+                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {library.name}
                                     </Typography>
@@ -283,7 +283,7 @@ export default function Skills() {
                     </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={6}>
-                    <Paper elevation={3} sx={{ width: '100%', bgcolor: '#f3f6fc', borderRadius: '20px' }}>
+                    <Paper elevation={3} sx={{ width: '100%', bgcolor: 'secondary.main', borderRadius: '20px' }}>
                         {skills.overarching.map((skill) => (
                             <Box key={skill.name}>
                                 <ListItemButton>

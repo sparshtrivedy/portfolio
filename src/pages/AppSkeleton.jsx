@@ -35,8 +35,14 @@ import Singleton from './WritingsTab/Technical/Singleton';
 import Strategy from './WritingsTab/Technical/Strategy';
 import sparsh from '../assets/images/sparsh.jpg';
 import Comments from './WritingsTab/Technical/Comments';
+import { useTheme } from '@mui/material/styles';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
+import { ColorModeContext } from '../App'
 
 function AppSkeleton() {
+    const theme = useTheme();
+    const colorMode = React.useContext(ColorModeContext);
+
     const drawerWidth = 150;
 
     const location = useLocation();
@@ -60,7 +66,7 @@ function AppSkeleton() {
     };
 
     const drawer = (
-        <div style={{backgroundColor:'#eaf0f9', height: '100vh'}}>
+        <Box sx={{bgcolor: 'secondary.main', m: 0}}>
             <List>
                 <ListItem disablePadding>
                     <ListItemButton sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -78,16 +84,23 @@ function AppSkeleton() {
                     </ListItem>
                 </Link>
                 ))}
+                <Divider />
+                <ListItem disablePadding>
+                    <ListItemButton sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}} onClick={colorMode.toggleColorMode}>
+                        {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+                        <ListItemText primary={theme.palette.mode === 'dark' ? 'Light mode' : 'Dark mode'} />
+                    </ListItemButton>
+                </ListItem>
             </List>
-        </div>
+        </Box>
     );
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', bgcolor: 'background.secondary', height: '100%' }}>
             {initializeRefs(3)}
             <Box
                 component="nav"
-                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, bgcolor: 'background.secondary' }}
                 aria-label="mailbox folders"
             >
                 <CssBaseline />
@@ -96,7 +109,8 @@ function AppSkeleton() {
                     sx={{
                         width: { sm: `calc(100% - ${drawerWidth}px)` },
                         ml: { sm: `${drawerWidth}px` },
-                        display: { sm: 'none', backgroundColor: '#eaf0f9' },
+                        display: { sm: 'none' },
+                        bgcolor: 'secondary.main'
                     }}
                 >
                 <Toolbar>
@@ -123,7 +137,8 @@ function AppSkeleton() {
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: 'secondary.main' },
+                        height: '100%'
                     }}
                 >
                     {drawer}
@@ -132,7 +147,8 @@ function AppSkeleton() {
                     variant="permanent"
                     sx={{
                         display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, bgcolor: 'secondary.main' },
+                        height: '100vh'
                     }}
                     open
                 >
@@ -141,7 +157,7 @@ function AppSkeleton() {
             </Box>
             <Box
                 component="main"
-                sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` }, height: '96vh', mt: { sm: 0, xs: '8vh' }}}
+                sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` }, height: '96vh', mt: { sm: 0, xs: '8vh' }, bgcolor: 'background.main'}}
             >
                 <Routes>
                     <Route path="/" element={<TitleCard />} />

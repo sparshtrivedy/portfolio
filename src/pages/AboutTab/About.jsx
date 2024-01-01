@@ -7,7 +7,8 @@ import {
     Grid, 
     ImageList, 
     ImageListItem, 
-    Tooltip 
+    Tooltip,
+    Box
 } from '@mui/material';
 import picturelist from '../../data/picturelist';
 
@@ -28,7 +29,7 @@ export default function About() {
     React.useEffect(() => {setChecked(true)}, []);
     
     return (
-        <div style={{backgroundColor: '#f8fafd', margin: 0}}>
+        <Box sx={{backgroundColor: 'background.main', margin: 0}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -44,7 +45,7 @@ export default function About() {
                 }}
             >
                 <Fade in={checked} timeout={1000}>
-                    <Typography variant='h2' sx={{fontWeight: 500}}>About me</Typography>
+                    <Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>About me</Typography>
                 </Fade>
             </Paper>
             <Grid container spacing={2} sx={{height: '100%', width: '100%', display: 'flex', justifyContent: 'stretch'}}>
@@ -92,6 +93,6 @@ export default function About() {
                     </Paper>
                 </Grid>
             </Grid>
-        </div>
+        </Box>
     );
 }

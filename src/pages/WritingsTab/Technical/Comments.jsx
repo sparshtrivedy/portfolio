@@ -12,7 +12,7 @@ import codecomments from '../../../assets/writings/codecomments.png';
 
 export default function Comments() {
     return (
-        <Grid container justifyContent={'center'} sx={{bgcolor: '#f8fafd'}}>
+        <Grid container justifyContent={'center'} sx={{bgcolor: 'background.main'}}>
             <Grid item xs={8}>
                 <Paper elevation={3} sx={{padding: 4}}>
                     <Typography variant={'subtitle2'}>26.12.2023</Typography>

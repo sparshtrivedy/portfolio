@@ -31,7 +31,7 @@ export default function Education() {
     );
 
     return (
-        <Box style={{backgroundColor: '#f8fafd', margin: 0}}>
+        <Box sx={{bgcolor: 'background.main', margin: 0}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -46,7 +46,7 @@ export default function Education() {
                     margin: 2
                 }}
             >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500}}>Education</Typography></Fade>
+                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Education</Typography></Fade>
             </Paper>
             <Box sx={{margin: 2, paddingBottom: 2}}>
                 <Grid container spacing={2} justifyContent={'center'}>
@@ -72,8 +72,8 @@ export default function Education() {
                             <ul style={{padding: '1em', marginLeft: '1em'}}>
                                 <li><Typography>Outstanding International Student Award</Typography></li>
                                 <li><Typography>Computer Science Teaching Assistant</Typography></li>
-                                <li><Typography>Cumulative Average: 84.4%</Typography></li>
-                                <li><Typography>CPSC + MATH + STAT Average: 85.9%</Typography></li>
+                                <li><Typography>Cumulative Average: 85.0%</Typography></li>
+                                <li><Typography>CPSC + MATH + STAT Average: 86.1%</Typography></li>
                             </ul>
                             <CardMedia component={"img"} alt={'campus'} image={campus} style={{width: '100%', margin: 0, padding: 0}} />
                         </Card>

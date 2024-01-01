@@ -6,9 +6,10 @@ import {
     ListItemText, 
     Divider, 
     Typography ,
-    Box
+    Box,
+    ListSubheader
 } from '@mui/material';
-import courses from '../../data/courses';
+import { courses, currentTerm } from '../../data/courses';
 
 export default function CourseList() {
     return(
@@ -20,7 +21,22 @@ export default function CourseList() {
             height: '55vh',
             borderRadius: '20px',
         }}>
-            <Typography variant='h5' sx={{margin: 2}} textAlign={'center'}>Courses</Typography>
+            <Typography variant='h5' sx={{margin: 2}} textAlign={'center'}>Relevant courses</Typography>
+            <Divider sx={{width: '100%'}} />
+            <ListSubheader>Currently taking</ListSubheader>
+            <Divider sx={{width: '100%'}} />
+            {currentTerm.map((course) => (
+                <Box key={course.title}>
+                    <ListItemButton>
+                        <ListItem>
+                            <ListItemText primary={course.description} secondary={`${course.term} ${course.title}`} />
+                        </ListItem>
+                    </ListItemButton>
+                    <Divider />
+                </Box>
+            ))}
+
+            <ListSubheader>Completed courses</ListSubheader>
             <Divider sx={{width: '100%'}} />
             {courses.map((course) => (
                 <Box key={course.title}>

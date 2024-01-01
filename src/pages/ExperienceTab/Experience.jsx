@@ -21,7 +21,7 @@ export default function Experience() {
     }, []);
     
     return (
-        <div style={{backgroundColor: '#f8fafd', margin: 0}}>
+        <Box sx={{bgcolor: 'background.main', margin: 0}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -36,7 +36,7 @@ export default function Experience() {
                     margin: 2
                 }}
             >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500}}>Experience</Typography></Fade>
+                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Experience</Typography></Fade>
             </Paper>
             <Box sx={{margin: 2, marginRight: 0}}>
                 <Grid container spacing={2} sx={{height: '100%', width: '100%', display: 'flex', pb: 2}}>
@@ -46,7 +46,7 @@ export default function Experience() {
                     <Grid item xs={5}>
                         <Paper elevation={3}
                             sx={{
-                                backgroundColor: '#eaf0f9',
+                                backgroundColor: 'secondary.main',
                                 height: '100%',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -63,6 +63,6 @@ export default function Experience() {
                     </Grid>
                 </Grid>
             </Box>
-        </div>
+        </Box>
     );
 }

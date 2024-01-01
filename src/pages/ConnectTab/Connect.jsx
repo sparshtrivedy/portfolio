@@ -149,7 +149,7 @@ export default function Connect() {
     }
     
     return (
-        <div style={{backgroundColor: '#f8fafd'}}>
+        <Box sx={{bgcolor: 'background.main', margin: 0}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -164,7 +164,7 @@ export default function Connect() {
                     margin: 2
                 }}
             >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500}}>Connect</Typography></Fade>
+                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Connect</Typography></Fade>
             </Paper>
             <Box
                 component="form"
@@ -316,6 +316,6 @@ export default function Connect() {
                     </Grid>
                 </Grid>
             </Box>
-        </div>
+        </Box>
     );
 }
