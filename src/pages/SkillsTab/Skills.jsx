@@ -117,6 +117,7 @@ export default function Skills() {
                                     alt="express.js logo"
                                     height="140"
                                     image={language.img}
+                                    sx={{bgcolor: 'media.main'}}
                                 />
                                 <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -146,6 +147,7 @@ export default function Skills() {
                                     alt="express.js logo"
                                     height="140"
                                     image={framework.img}
+                                    sx={{bgcolor: 'media.main'}}
                                 />
                                 <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -175,6 +177,7 @@ export default function Skills() {
                                     alt="express.js logo"
                                     height="140"
                                     image={language.img}
+                                    sx={{bgcolor: 'media.main'}}
                                 />
                                 <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -204,6 +207,7 @@ export default function Skills() {
                                     alt="express.js logo"
                                     height="140"
                                     image={dbms.img}
+                                    sx={{bgcolor: 'media.main'}}
                                 />
                                 <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -233,6 +237,7 @@ export default function Skills() {
                                     alt="express.js logo"
                                     height="140"
                                     image={platform.img}
+                                    sx={{bgcolor: 'media.main'}}
                                 />
                                 <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -262,6 +267,7 @@ export default function Skills() {
                                     alt="express.js logo"
                                     height="140"
                                     image={library.img}
+                                    sx={{bgcolor: 'media.main'}}
                                 />
                                 <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
                                     <Typography gutterBottom variant="h5" component="div">

@@ -27,7 +27,7 @@ export default function ProjectMediaViewer({media}) {
     };
 
     return (
-        <Paper sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRadius: '20px', bgcolor: '#f3f6fc'}} elevation={3}>
+        <Paper sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRadius: '20px', bgcolor: 'secondary.main'}} elevation={3}>
             <Paper
                 square
                 elevation={0}

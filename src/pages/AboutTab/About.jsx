@@ -14,10 +14,10 @@ import picturelist from '../../data/picturelist';
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
-      src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-      srcSet: `${image}?w=${size * cols}&h=${
-        size * rows
-      }&fit=crop&auto=format&dpr=2 2x`,
+        src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+        srcSet: `${image}?w=${size * cols}&h=${
+            size * rows
+        }&fit=crop&auto=format&dpr=2 2x`,
     };
 }
 
@@ -29,7 +29,7 @@ export default function About() {
     React.useEffect(() => {setChecked(true)}, []);
     
     return (
-        <Box sx={{backgroundColor: 'background.main', margin: 0}}>
+        <Box sx={{bgcolor: 'background.main', margin: 0}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -89,7 +89,7 @@ export default function About() {
                                     </Tooltip>
                                 </Fade>
                             ))}
-                            </ImageList>
+                        </ImageList>
                     </Paper>
                 </Grid>
             </Grid>

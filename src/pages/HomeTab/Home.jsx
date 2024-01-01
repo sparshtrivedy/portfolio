@@ -18,19 +18,29 @@ export default function TitleCard()  {
     }, []);
     
     return (
-        <Box sx={{bgcolor: 'background.main', height: '100%', margin: 0, padding: 0}}>
+        <Box sx={{
+                bgcolor: 'background.main', 
+                height: '100vh', 
+                margin: 0, 
+                padding: 2, 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center'
+            }}
+        >
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    height: {sm: '100%', xs: '98vh'},
+                    height: '96vh',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     borderRadius: '20px',
                     flexDirection: 'column',
-                    margin: 2,
+                    margin: 0,
+                    width: '100%',
                 }}
             >
                 <Avatar alt="Sparsh Trivedy" src={sparsh} sx={{ width: '40vh', height: '40vh', marginBottom: '3vh' }} />

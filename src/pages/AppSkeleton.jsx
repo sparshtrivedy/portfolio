@@ -96,11 +96,11 @@ function AppSkeleton() {
     );
 
     return (
-        <Box sx={{ display: 'flex', bgcolor: 'background.secondary', height: '100%' }}>
+        <Box sx={{ display: 'flex', bgcolor: 'background.main', height: '100vh' }}>
             {initializeRefs(3)}
             <Box
                 component="nav"
-                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, bgcolor: 'background.secondary' }}
+                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, bgcolor: 'background.main' }}
                 aria-label="mailbox folders"
             >
                 <CssBaseline />
@@ -113,20 +113,20 @@ function AppSkeleton() {
                         bgcolor: 'secondary.main'
                     }}
                 >
-                <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' }, color: 'ButtonText' }}
-                    >
-                        <Menu />
-                    </IconButton>
-                    <Typography variant="h6" noWrap component="div" sx={{color: 'ButtonText'}}>
-                        Sparsh Trivedy
-                    </Typography>
-                </Toolbar>
+                    <Toolbar>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            edge="start"
+                            onClick={handleDrawerToggle}
+                            sx={{ mr: 2, display: { sm: 'none' }}}
+                        >
+                            <Menu />
+                        </IconButton>
+                        <Typography variant="h6" noWrap component="div">
+                            Sparsh Trivedy
+                        </Typography>
+                    </Toolbar>
                 </AppBar>
                 <Drawer
                     variant="temporary"

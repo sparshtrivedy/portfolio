@@ -1,59 +1,69 @@
-import React, { createContext, useMemo, useState } from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
 import './App.css';
-import { ThemeProvider, createTheme } from '@mui/material';
-import AppSkeleton from './pages/AppSkeleton';
+import React, { createContext, useMemo, useState } from 'react';
+import { 
+    ThemeProvider, 
+    createTheme,
+    Box,
+    CssBaseline
+} from '@mui/material';
 import { HashRouter as Router } from 'react-router-dom';
-import Box from '@mui/material/Box';
+import AppSkeleton from './pages/AppSkeleton';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function App() {
-  const [mode, setMode] = useState('light');
+    const [mode, setMode] = useState('light');
 
-  const getDesignTokens = (mode) => ({
-    palette: {
-      mode,
-      ...(mode === 'light'
-      ? {
-          secondary: {
-            main: '#eaf0f9',
-          },
-          background: {
-            main: '#f8fafd',
-          },
+    const getDesignTokens = (mode) => ({
+        palette: {
+            mode,
+            ...(mode === 'light'
+            ? {
+                secondary: {
+                    main: '#eaf0f9',
+                },
+                background: {
+                    main: '#f8fafd',
+                },
+                media: {
+                    main: 'paper.main'
+                }
+            }
+            : {
+                secondary: {
+                    main: '#212121'
+                },
+                background: {
+                    main: '#424242',
+                },
+                media: {
+                    main: '#616161'
+                }
+                // 616161
+            }),
+        },
+    });
+
+    const colorMode = useMemo(() => ({
+        toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
         }
-      : {
-          secondary: {
-            main: '#212121'
-          },
-          background: {
-            main: '#424242',
-          },
-      }),
-    },
-  });
+    }),[]);
 
-  const colorMode = useMemo(() => ({
-    toggleColorMode: () => {
-      setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-    }
-  }),[]);
+    const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
-  const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
-
-  return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline enableColorScheme />
-        <Box component='div' sx={{bgcolor: 'background.main'}} className='App'>
-          <Router>
-            <AppSkeleton />
-          </Router>
-        </Box>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
-  );
+    return (
+        <ColorModeContext.Provider value={colorMode}>
+            <ThemeProvider theme={theme}>
+                <CssBaseline enableColorScheme />
+                <Box component='div' sx={{bgcolor: 'background.main'}} className='App'>
+                    <Router>
+                        <AppSkeleton />
+                    </Router>
+                </Box>
+            </ThemeProvider>
+        </ColorModeContext.Provider>
+    );
 }
 
 export default App;
