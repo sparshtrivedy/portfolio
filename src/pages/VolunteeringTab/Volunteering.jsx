@@ -36,7 +36,7 @@ export default function Volunteering() {
             </Paper>
             <Box sx={{margin: 2, display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                 {volunteering.map((experience) => (
-                    <Card sx={{ borderRadius: '20px', minWidth: '250px', width: '32.73%', paddingY: 2, marginBottom: 2 }} key={experience.id}>
+                    <Card sx={{ borderRadius: '20px', minWidth: '250px', width: {xs: '100%', sm: '32.73%'}, paddingY: 2, marginBottom: 2 }} key={experience.id}>
                         <CardContent>
                             <div style={{display: 'flex', alignItems: 'center'}}>
                                 <div>
