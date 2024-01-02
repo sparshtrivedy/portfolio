@@ -82,6 +82,8 @@ export default function Writings() {
             url = "https://www.sparshtrivedy.com/#/writings/strategy"
         } else if (e.target.id === 'singleton') {
             url = "https://www.sparshtrivedy.com/#/writings/singleton"
+        } else if (e.target.id === 'callbacks') {
+            url = "https://www.sparshtrivedy.com/#/writings/callbacks"
         }
 
         await navigator.clipboard.writeText(url)
@@ -186,7 +188,7 @@ export default function Writings() {
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{mb: 2}}>
-                            <Button size="small" onClick={copyToClipboard} id="comments" sx={{mr: 2}}>
+                                <Button size="small" onClick={copyToClipboard} id="comments" sx={{mr: 2}}>
                                     <ShareOutlined sx={{mr: 1}} />
                                     Share
                                 </Button>
@@ -204,18 +206,19 @@ export default function Writings() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    Callbacks
+                                    Callbacks and Async
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    Coming soon...
+                                    Callbacks are a way to make sure certain code doesn't execute until other code has already finished execution.
+                                    However, callbacks can be a pain to work with. This article will explain how to use callbacks and how to avoid callback hell.
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{mb: 2}}>
-                            <Button disabled size="small" onClick={copyToClipboard} id="callbacks" sx={{mr: 2}}>
+                                <Button size="small" onClick={copyToClipboard} id="callbacks" sx={{mr: 2}}>
                                     <ShareOutlined sx={{mr: 1}} />
                                     Share
                                 </Button>
-                                <Button disabled size="small" href="/#/writings/callbacks">
+                                <Button size="small" href="/#/writings/callbacks">
                                     <FileOpenOutlined sx={{mr: 1}} />
                                     Read
                                 </Button>

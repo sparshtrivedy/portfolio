@@ -38,6 +38,7 @@ import Comments from './WritingsTab/Technical/Comments';
 import { useTheme } from '@mui/material/styles';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import { ColorModeContext } from '../App'
+import Callbacks from './WritingsTab/Technical/Callbacks';
 
 function AppSkeleton() {
     const theme = useTheme();
@@ -173,6 +174,7 @@ function AppSkeleton() {
                     <Route path='/writings/singleton' element={<Singleton />} />
                     <Route path='/writings/strategy' element={<Strategy />} />
                     <Route path='/writings/comments' element={<Comments />} />
+                    <Route path='/writings/callbacks' element={<Callbacks />} />
                 </Routes>
             </Box>
         </Box>
