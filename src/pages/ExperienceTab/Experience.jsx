@@ -40,10 +40,10 @@ export default function Experience() {
             </Paper>
             <Box sx={{margin: 2, marginRight: 0}}>
                 <Grid container spacing={2} sx={{height: '100%', width: '100%', display: 'flex', pb: 2}}>
-                    <Grid item xs={7}>
+                    <Grid item xs={12} sm={7}>
                         <ExperienceAccordian />
                     </Grid>
-                    <Grid item xs={5}>
+                    <Grid item xs={12} sm={5}>
                         <Paper elevation={3}
                             sx={{
                                 backgroundColor: 'secondary.main',

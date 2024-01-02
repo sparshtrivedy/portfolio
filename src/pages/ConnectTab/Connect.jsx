@@ -173,7 +173,7 @@ export default function Connect() {
                 autoComplete="off"
             >
                 <Grid container spacing={2} sx={{height: '100%', display: 'flex', justifyContent: 'center'}}>
-                    <Grid item xs={7}>
+                    <Grid item xs={12} sm={7}>
                         <Paper elevation={3} sx={{height:'98%', padding: 2, marginBottom: 2, borderRadius: '20px'}}>
                             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: 1 }}>
                                 <ContactMail sx={{ mr: 1, my: 0.5 }} />
@@ -260,7 +260,7 @@ export default function Connect() {
                             </div>
                         </Paper>
                     </Grid>
-                    <Grid item xs={5}>
+                    <Grid item xs={12} sm={5}>
                         <Paper elevation={3} sx={{height: '98%', padding: 2, marginBottom: 2, borderRadius: '20px'}}>
                             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: 1 }}>
                                 <PersonAdd sx={{ mr: 1, my: 0.5 }} />

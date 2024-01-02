@@ -94,7 +94,7 @@ export default function Writings() {
     }
 
     return (
-        <Box sx={{bgcolor: 'background.main', margin: 0}}>
+        <Box sx={{bgcolor: 'background.main', margin: 0, width: '100%'}}>
             <Paper elevation={3}
                 sx={{
                     backgroundImage: `url(${backgroundImage})`,
@@ -119,8 +119,8 @@ export default function Writings() {
                     </Tabs>
                 </Box>
                 <CustomTabPanel value={value} index={0}>
-                    <div style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-                        <Card sx={{ maxWidth: 500, borderRadius: '20px', mb: 2 }}>
+                    <Box sx={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
+                        <Card sx={{ maxWidth: {xs: '100%', sm: 500}, borderRadius: '20px', mb: 2 }}>
                             <CardMedia
                                 sx={{ height: 340 }}
                                 image={singleton}
@@ -135,7 +135,7 @@ export default function Writings() {
                                     This is a very simple and easy to use design pattern; however, it is often overused and misused.
                                 </Typography>
                             </CardContent>
-                            <CardActions sx={{marginBottom: 2}}>
+                            <CardActions sx={{mb: 2}}>
                                 <Button size="small" onClick={copyToClipboard} id="singleton" sx={{mr: 2}}>
                                     <ShareOutlined sx={{mr: 1}} />
                                     Share
@@ -146,7 +146,7 @@ export default function Writings() {
                                 </Button>
                             </CardActions>
                         </Card>
-                        <Card sx={{ maxWidth: 500, borderRadius: '20px', mb: 2 }}>
+                        <Card sx={{ maxWidth: {xs: '100%', sm: 500}, borderRadius: '20px', mb: 2 }}>
                             <CardMedia
                                 sx={{ height: 340 }}
                                 image={strategy}
@@ -160,7 +160,7 @@ export default function Writings() {
                                     The strategy design pattern is a behavioral design pattern that enables selecting an algorithm at runtime.
                                 </Typography>
                             </CardContent>
-                            <CardActions sx={{marginBottom: 2}}>
+                            <CardActions sx={{mb: 2}}>
                             <Button size="small" onClick={copyToClipboard} id="strategy" sx={{mr: 2}}>
                                     <ShareOutlined sx={{mr: 1}} />
                                     Share
@@ -171,7 +171,7 @@ export default function Writings() {
                                 </Button>
                             </CardActions>
                         </Card>
-                        <Card sx={{ maxWidth: 500, borderRadius: '20px', mb: 2 }}>
+                        <Card sx={{ maxWidth: {xs: '100%', sm: 500}, borderRadius: '20px', mb: 2 }}>
                             <CardMedia
                                 sx={{ height: 340 }}
                                 image={codecomments}
@@ -185,7 +185,7 @@ export default function Writings() {
                                     Are you using comments to explain what your code does? If so, you are doing it wrong.
                                 </Typography>
                             </CardContent>
-                            <CardActions sx={{marginBottom: 2}}>
+                            <CardActions sx={{mb: 2}}>
                             <Button size="small" onClick={copyToClipboard} id="comments" sx={{mr: 2}}>
                                     <ShareOutlined sx={{mr: 1}} />
                                     Share
@@ -196,7 +196,7 @@ export default function Writings() {
                                 </Button>
                             </CardActions>
                         </Card>
-                        <Card sx={{ width: 500, borderRadius: '20px', mb: 2 }}>
+                        <Card sx={{ width: {xs: '100%', sm: 500}, borderRadius: '20px', mb: 2 }}>
                             <CardMedia
                                 sx={{ height: 340 }}
                                 image={callbacks}
@@ -210,7 +210,7 @@ export default function Writings() {
                                     Coming soon...
                                 </Typography>
                             </CardContent>
-                            <CardActions sx={{marginBottom: 2}}>
+                            <CardActions sx={{mb: 2}}>
                             <Button disabled size="small" onClick={copyToClipboard} id="callbacks" sx={{mr: 2}}>
                                     <ShareOutlined sx={{mr: 1}} />
                                     Share
@@ -221,7 +221,7 @@ export default function Writings() {
                                 </Button>
                             </CardActions>
                         </Card>
-                    </div>
+                    </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
                     Coming soon...

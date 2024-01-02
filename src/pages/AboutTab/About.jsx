@@ -49,13 +49,13 @@ export default function About() {
                 </Fade>
             </Paper>
             <Grid container spacing={2} sx={{height: '100%', width: '100%', display: 'flex', justifyContent: 'stretch'}}>
-                <Grid item xs={6} sx={{padding: 2}}>
-                    <Typography sx={{margin: 2}}>Hello, my name is Sparsh and I am a 3rd year CS major at UBC, where I am currently a TA for an Applied Machine Learning course.</Typography>
-                    <Typography sx={{margin: 2}}>I find joy in learning new technologies and using them to build cool projects! My self-learning is driven by a curiosity to explore new things.</Typography>
-                    <Typography sx={{margin: 2}}>I have previously worked as a Software Developer co-op at BGC Engineering where I worked on a risk assessment and management platform for Engineers. I have also done a Work-Learn with the Faculty of Forestry at UBC where I worked on developing the TA application portal.</Typography>
-                    <Typography sx={{margin: 2}}>When I'm not immersed in code, I like to explore the outdoors and try out new cafes. I have also learnt Tabla, an Indian classical instrument for over 9 years and have even played at several venues.</Typography>
+                <Grid item xs={12} sm={6}>
+                    <Typography sx={{ml: 2, mb: 2}}>Hello, my name is Sparsh and I am a 3rd year CS major at UBC, where I am currently a TA for an Applied Machine Learning course.</Typography>
+                    <Typography sx={{ml: 2, mb: 2}}>I find joy in learning new technologies and using them to build cool projects! My self-learning is driven by a curiosity to explore new things.</Typography>
+                    <Typography sx={{ml: 2, mb: 2}}>I have previously worked as a Software Developer co-op at BGC Engineering where I worked on a risk assessment and management platform for Engineers. I have also done a Work-Learn with the Faculty of Forestry at UBC where I worked on developing the TA application portal.</Typography>
+                    <Typography sx={{ml: 2}}>When I'm not immersed in code, I like to explore the outdoors and try out new cafes. I have also learnt Tabla, an Indian classical instrument for over 9 years and have even played at several venues.</Typography>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6} sx={{ml: {xs: 2, sm: 0}}}>
                     <Paper elevation={3}
                         sx={{
                             height: '98%',
@@ -71,7 +71,7 @@ export default function About() {
                             variant="quilted"
                             cols={4}
                             rowHeight={121}
-                            >
+                        >
                             {picturelist.map((item, index) => (
                                 <Fade
                                     in={checked}

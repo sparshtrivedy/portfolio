@@ -50,7 +50,7 @@ export default function Education() {
             </Paper>
             <Box sx={{margin: 2, paddingBottom: 2}}>
                 <Grid container spacing={2} justifyContent={'center'}>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} sm={6}>
                         <Card sx={{ height: '55vh', width: '100%', borderRadius: '20px' }}>
                             <Box style={{display: 'flex', alignItems: 'center', padding: '1em'}}>
                                 <Box>
@@ -78,7 +78,7 @@ export default function Education() {
                             <CardMedia component={"img"} alt={'campus'} image={campus} style={{width: '100%', margin: 0, padding: 0}} />
                         </Card>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} sm={6}>
                         <CourseList />
                     </Grid>
                 </Grid>

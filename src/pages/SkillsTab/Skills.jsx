@@ -17,7 +17,11 @@ import {
     Avatar, 
     ListItemButton, 
     Divider, 
-    Link 
+    Link, 
+    Select,
+    MenuItem,
+    FormControl,
+    InputLabel
 } from '@mui/material';
 import PropTypes from 'prop-types';
 import skills from '../../data/skills.js';
@@ -67,9 +71,13 @@ export default function Skills() {
         setChecked(true)
     }, []);
 
-    const handleChange = (event, newValue) => {
+    const handleTabChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    const handleSelectChange = (event) => {
+        setValue(event.target.value);
+    }
 
     return (
         <Box sx={{bgcolor: 'background.main', margin: 0}}>
@@ -90,10 +98,10 @@ export default function Skills() {
                 <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Skills</Typography></Fade>
             </Paper>
             <Box sx={{margin: 2}}>
-                <Box sx={{ borderBottom: 1, minWidth: '100%', borderColor: 'divider'}}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider', display: { sm: 'block', xs: 'none' } }}>
                     <Tabs
                         value={value}
-                        onChange={handleChange}
+                        onChange={handleTabChange}
                         variant="scrollable"
                         scrollButtons
                         allowScrollButtonsMobile
@@ -108,10 +116,30 @@ export default function Skills() {
                         <Tab label="Overarching" {...a11yProps(6)} />
                     </Tabs>
                 </Box>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider', display: { sm: 'none', xs: 'block' } }}>
+                    <FormControl sx={{width: '100%', mb: 1}}>
+                        <InputLabel id="demo-simple-select-label">Category</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={value}
+                            label="Category"
+                            onChange={handleSelectChange}
+                        >
+                            <MenuItem value={0}>Languages</MenuItem>
+                            <MenuItem value={1}>Back-end</MenuItem>
+                            <MenuItem value={2}>Front-end</MenuItem>
+                            <MenuItem value={3}>Database</MenuItem>
+                            <MenuItem value={4}>Cloud</MenuItem>
+                            <MenuItem value={5}>ML / Data Analysis</MenuItem>
+                            <MenuItem value={6}>Overarching</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Box>
                 <CustomTabPanel value={value} index={0}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                         {skills.languages.map((language) => (
-                            <Card key={language.name} sx={{ width: 250, marginBottom: 2, borderRadius: '20px' }}>
+                            <Card key={language.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
                                 <CardMedia
                                     component="img"
                                     alt="express.js logo"
@@ -138,10 +166,10 @@ export default function Skills() {
                         ))} 
                     </Box>
                 </CustomTabPanel>
-                <CustomTabPanel value={value} index={1} sx={{width: '100%'}}>
+                <CustomTabPanel value={value} index={1}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                         {skills.backend.map((framework) => (
-                            <Card key={framework.name} sx={{ width: 250, marginBottom: 2, borderRadius: '20px' }}>
+                            <Card key={framework.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
                                 <CardMedia
                                     component="img"
                                     alt="express.js logo"
@@ -171,7 +199,7 @@ export default function Skills() {
                 <CustomTabPanel value={value} index={2}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                         {skills.frontend.map((language) => (
-                            <Card key={language.name} sx={{ width: 250, marginBottom: 2, borderRadius: '20px' }}>
+                            <Card key={language.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
                                 <CardMedia
                                     component="img"
                                     alt="express.js logo"
@@ -201,7 +229,7 @@ export default function Skills() {
                 <CustomTabPanel value={value} index={3}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                         {skills.database.map((dbms) => (
-                            <Card key={dbms.name} sx={{ width: 250, marginBottom: 2, borderRadius: '20px' }}>
+                            <Card key={dbms.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
                                 <CardMedia
                                     component="img"
                                     alt="express.js logo"
@@ -231,7 +259,7 @@ export default function Skills() {
                 <CustomTabPanel value={value} index={4}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                         {skills.cloud.map((platform) => (
-                            <Card key={platform.name} sx={{ width: 250, marginBottom: 2, borderRadius: '20px' }}>
+                            <Card key={platform.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
                                 <CardMedia
                                     component="img"
                                     alt="express.js logo"
@@ -261,7 +289,7 @@ export default function Skills() {
                 <CustomTabPanel value={value} index={5}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                         {skills.ml.map((library) => (
-                            <Card key={library.name} sx={{ width: 250, marginBottom: 2, borderRadius: '20px' }}>
+                            <Card key={library.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
                                 <CardMedia
                                     component="img"
                                     alt="express.js logo"
