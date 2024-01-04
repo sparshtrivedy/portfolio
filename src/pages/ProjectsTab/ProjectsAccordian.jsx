@@ -56,7 +56,7 @@ export default function ProjectsAccordian() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Grid container spacing={2} sx={{height: '100%', width: '100%', display: 'flex', justifyContent: 'stretch'}}>
-                        <Grid item xs={7}>
+                        <Grid item xs={12} sm={7}>
                             <AccordionDetails>
                                 <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 2}}>
                                     <Typography color={'text.secondary'}>{project.skills}</Typography>
@@ -90,7 +90,7 @@ export default function ProjectsAccordian() {
                                 </Button>
                             </Grid>
                         </Grid>
-                        <Grid item xs={5}>
+                        <Grid item xs={12} sm={5}>
                             <ProjectMediaViewer media={project.media} />
                         </Grid>
                     </Grid>

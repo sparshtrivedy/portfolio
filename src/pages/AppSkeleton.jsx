@@ -160,7 +160,7 @@ function AppSkeleton() {
             </Box>
             <Box
                 component="main"
-                sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` }, height: '96vh', mt: { sm: 0, xs: '8vh' }, bgcolor: 'background.main'}}
+                sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` }, height: '96vh', mt: { sm: 0, xs: '3.7rem' }, bgcolor: 'background.main'}}
             >
                 <Routes>
                     <Route path="/" element={<TitleCard />} />
