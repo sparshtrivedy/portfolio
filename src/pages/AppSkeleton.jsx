@@ -33,7 +33,7 @@ import Writings from './WritingsTab/Writings';
 import menuitems from '../data/menuitems';
 import Singleton from './WritingsTab/Technical/Singleton';
 import Strategy from './WritingsTab/Technical/Strategy';
-import sparsh from '../assets/images/sparsh.jpg';
+import peep from '../assets/images/peep.jpeg';
 import Comments from './WritingsTab/Technical/Comments';
 import { useTheme } from '@mui/material/styles';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
@@ -72,7 +72,7 @@ function AppSkeleton() {
             <List>
                 <ListItem disablePadding>
                     <ListItemButton sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                        <Avatar alt='sparsh trivedy' src={sparsh} sx={{ width: '3em', height: '3em' }} />
+                        <Avatar alt='sparsh trivedy' src={peep} sx={{ width: '3em', height: '3em' }} />
                     </ListItemButton>
                 </ListItem>
                 <Divider />

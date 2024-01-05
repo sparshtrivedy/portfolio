@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
     Typography, 
     Paper, 
@@ -11,6 +11,7 @@ import {
     Box
 } from '@mui/material';
 import picturelist from '../../data/picturelist';
+import HeaderCard from '../../components/HeaderCard';
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -24,30 +25,13 @@ function srcset(image, size, rows = 1, cols = 1) {
 export default function About() {
     const backgroundImage = 'https://lh3.googleusercontent.com/D3-OahttrL-yH62XV-Ss1HzQWT1RaCeAowh_b24TSPUbfilOv559cGrzrExTklxin0oOrZ4RlyPYe85coUMZDSTCqgMOlsofyLm3RKFzhwONddZRf8X_=w2400-rj';
 
-    const [checked, setChecked] = React.useState(false);
+    const [checked, setChecked] = useState(false);
 
-    React.useEffect(() => {setChecked(true)}, []);
+    useEffect(() => {setChecked(true)}, []);
     
     return (
         <Box sx={{bgcolor: 'background.main', margin: 0}}>
-            <Paper elevation={3}
-                sx={{
-                    backgroundImage: `url(${backgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '40vh',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '20px',
-                    flexDirection: 'column',
-                    margin: 2
-                }}
-            >
-                <Fade in={checked} timeout={1000}>
-                    <Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>About me</Typography>
-                </Fade>
-            </Paper>
+            <HeaderCard backgroundImage={backgroundImage} checked={checked} title={'About me'} />
             <Grid container spacing={2} sx={{height: '100%', width: '100%', display: 'flex', justifyContent: 'stretch'}}>
                 <Grid item xs={12} sm={6}>
                     <Typography sx={{ml: 2, mb: 2}}>Hello, my name is Sparsh and I am a 3rd year CS major at UBC, where I am currently a TA for an Applied Machine Learning course.</Typography>

@@ -45,9 +45,13 @@ function App() {
 
     const colorMode = useMemo(() => ({
         toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+            setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
         }
     }),[]);
+
+    React.useEffect(() => {
+        console.log(document.querySelectorAll("p * div"));
+    }, []);
 
     const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 

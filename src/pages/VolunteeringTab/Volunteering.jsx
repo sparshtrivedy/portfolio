@@ -1,14 +1,13 @@
 import React from 'react';
 import { 
-    Typography, 
-    Paper, 
-    Fade, 
+    Typography,
     Box, 
     Card, 
     CardContent, 
     Avatar 
 } from '@mui/material';
 import volunteering from '../../data/volunteering';
+import HeaderCard from '../../components/HeaderCard';
 
 export default function Volunteering() {
     const [checked, setChecked] = React.useState(false);
@@ -18,22 +17,7 @@ export default function Volunteering() {
     
     return (
         <Box sx={{bgcolor: 'background.main', margin: 0}}>
-            <Paper elevation={3}
-                sx={{
-                    backgroundImage: `url(${backgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '40vh',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '20px',
-                    flexDirection: 'column',
-                    margin: 2
-                }}
-            >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Volunteering</Typography></Fade>
-            </Paper>
+            <HeaderCard backgroundImage={backgroundImage} checked={checked} title={'Volunteering'} />
             <Box sx={{margin: 2, display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                 {volunteering.map((experience) => (
                     <Card sx={{ borderRadius: '20px', minWidth: '250px', width: {xs: '100%', sm: '32.73%'}, paddingY: 2, marginBottom: 2 }} key={experience.id}>

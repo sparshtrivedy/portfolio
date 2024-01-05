@@ -7,7 +7,7 @@ import {
     Box,
     useMediaQuery
 } from '@mui/material';
-import sparsh from '../../assets/sparsh-out.jpeg';
+import peep from '../../assets/images/peep.jpeg';
 
 export default function TitleCard()  {
     const backgroundImage = 'https://lh3.googleusercontent.com/56hiZfyb2EPY34-CEPG71OmvOGBTHLLhabrKW37cc13w4xp5cs-9Rel-zQO0anoqEejUOE6ZZPckCPVlgpG6N6rVDqoKQ7VA9iS9iHcR2jsGBDvrf0U=w2400';
@@ -46,7 +46,7 @@ export default function TitleCard()  {
                     width: '100%',
                 }}
             >
-                <Avatar alt="Sparsh Trivedy" src={sparsh} sx={{ width: {xs: '30vh', sm: '40vh'}, height: {xs: '30vh', sm: '40vh'}, marginBottom: '3vh' }} />
+                <Avatar alt="Sparsh Trivedy" src={peep} sx={{ width: {xs: '30vh', sm: '40vh'}, height: {xs: '30vh', sm: '40vh'}, marginBottom: '3vh', bgcolor: 'darkmagenta' }} />
                 {isSm?
                     <Typography variant='h5' sx={{fontWeight: 500, color: '#212121'}}>Hello, I am</Typography>:
                     <Typography variant='h5' sx={{fontWeight: 500, color: '#212121', fontSize: '1.2rem'}}>Hello, I am</Typography>

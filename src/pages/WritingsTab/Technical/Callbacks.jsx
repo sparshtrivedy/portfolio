@@ -28,7 +28,7 @@ export default function Callbacks() {
                             <Typography variant={'subtitle2'}>Sparsh Trivedy</Typography>
                         </Box>
                         <Divider />
-                        <img src={callbacks} alt={'Singleton Design Pattern'} style={{marginTop: '20px', width: '100%'}} />
+                        <img src={callbacks} alt={'Callback hell loop'} style={{marginTop: '20px', width: '100%'}} />
                         <div style={{margin: '40px 0'}}>
                             <Typography variant="h4" mb={2}>
                                 The JavaScript event loop

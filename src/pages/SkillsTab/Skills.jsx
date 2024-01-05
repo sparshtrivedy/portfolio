@@ -3,7 +3,6 @@ import React from 'react';
 import { 
     Typography, 
     Paper, 
-    Fade, 
     Box, 
     Tab, 
     Tabs, 
@@ -25,6 +24,7 @@ import {
 } from '@mui/material';
 import PropTypes from 'prop-types';
 import skills from '../../data/skills.js';
+import HeaderCard from '../../components/HeaderCard';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -81,22 +81,7 @@ export default function Skills() {
 
     return (
         <Box sx={{bgcolor: 'background.main', margin: 0}}>
-            <Paper elevation={3}
-                sx={{
-                    backgroundImage: `url(${backgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '40vh',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '20px',
-                    flexDirection: 'column',
-                    margin: 2,
-                }}
-            >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Skills</Typography></Fade>
-            </Paper>
+            <HeaderCard backgroundImage={backgroundImage} checked={checked} title={'Skills'} />
             <Box sx={{margin: 2}}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider', display: { sm: 'block', xs: 'none' } }}>
                     <Tabs

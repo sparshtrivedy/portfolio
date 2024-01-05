@@ -4,7 +4,6 @@ import axios from 'axios';
 import { 
     Typography, 
     Paper, 
-    Fade, 
     Grid, 
     Box, 
     TextField, 
@@ -27,6 +26,7 @@ import {
     ContactPage, 
     PersonAdd 
 } from '@mui/icons-material';
+import HeaderCard from '../../components/HeaderCard';
 
 const idMap = {
     'firstname': 'your first name',
@@ -150,22 +150,7 @@ export default function Connect() {
     
     return (
         <Box sx={{bgcolor: 'background.main', margin: 0}}>
-            <Paper elevation={3}
-                sx={{
-                    backgroundImage: `url(${backgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '40vh',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '20px',
-                    flexDirection: 'column',
-                    margin: 2
-                }}
-            >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Connect</Typography></Fade>
-            </Paper>
+            <HeaderCard backgroundImage={backgroundImage} checked={checked} title={'Connect'} />
             <Box
                 component="form"
                 sx={{margin: 2}}

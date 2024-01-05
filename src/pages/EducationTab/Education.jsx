@@ -1,9 +1,7 @@
 
 import React from 'react';
 import { 
-    Typography, 
-    Paper, 
-    Fade, 
+    Typography,
     Grid, 
     Box, 
     Card, 
@@ -14,6 +12,7 @@ import {
 import CourseList from './CourseList';
 import ubc from '../../assets/images/ubc.jpeg';
 import campus from '../../assets/images/campus.jpeg';
+import HeaderCard from '../../components/HeaderCard';
 
 export default function Education() {
     const [checked, setChecked] = React.useState(false);
@@ -32,22 +31,7 @@ export default function Education() {
 
     return (
         <Box sx={{bgcolor: 'background.main', margin: 0}}>
-            <Paper elevation={3}
-                sx={{
-                    backgroundImage: `url(${backgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '40vh',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '20px',
-                    flexDirection: 'column',
-                    margin: 2
-                }}
-            >
-                <Fade in={checked} timeout={1000}><Typography variant='h2' sx={{fontWeight: 500, color: '#212121'}}>Education</Typography></Fade>
-            </Paper>
+            <HeaderCard backgroundImage={backgroundImage} checked={checked} title={'Education'} />
             <Box sx={{margin: 2, paddingBottom: 2}}>
                 <Grid container spacing={2} justifyContent={'center'}>
                     <Grid item xs={12} sm={6}>
@@ -69,12 +53,14 @@ export default function Education() {
                                 </Box>
                             </Box>
                             <Divider sx={{width: '100%'}} />
-                            <ul style={{padding: '1em', marginLeft: '1em'}}>
-                                <li><Typography>Outstanding International Student Award</Typography></li>
-                                <li><Typography>Computer Science Teaching Assistant</Typography></li>
-                                <li><Typography>Cumulative Average: 85.0%</Typography></li>
-                                <li><Typography>CPSC + MATH + STAT Average: 86.1%</Typography></li>
-                            </ul>
+                            <Typography component={'div'} sx={{padding: '1em', marginLeft: '1em'}}>
+                                <ul>
+                                    <li><Typography>Outstanding International Student Award</Typography></li>
+                                    <li><Typography>Computer Science Teaching Assistant</Typography></li>
+                                    <li><Typography>Cumulative Average: 85.0%</Typography></li>
+                                    <li><Typography>CPSC + MATH + STAT Average: 86.1%</Typography></li>
+                                </ul>
+                            </Typography>
                             <CardMedia component={"img"} alt={'campus'} image={campus} style={{width: '100%', margin: 0, padding: 0}} />
                         </Card>
                     </Grid>
