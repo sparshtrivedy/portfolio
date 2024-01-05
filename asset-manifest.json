@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3eeec343.css",
-    "main.js": "/static/js/main.1889f827.js",
+    "main.js": "/static/js/main.965262fe.js",
     "static/js/787.a3e6b57b.chunk.js": "/static/js/787.a3e6b57b.chunk.js",
     "static/media/playbook.mov": "/static/media/playbook.570c76317f3858d485dc.mov",
     "static/media/woodworks.mp4": "/static/media/woodworks.25bdf268a2c1cf2cec83.mp4",
@@ -19,9 +19,9 @@
     "static/media/ocean.jpeg": "/static/media/ocean.7eea8365c9ceb3126549.jpeg",
     "static/media/art.jpeg": "/static/media/art.7c0f8649ac0fcf7a52c9.jpeg",
     "static/media/pasta.jpeg": "/static/media/pasta.6523a10aabb24d72d33d.jpeg",
+    "static/media/peep.jpeg": "/static/media/peep.be192ee6897c731d29d4.jpeg",
     "static/media/coffee.jpeg": "/static/media/coffee.35123f7dfb080793785b.jpeg",
     "static/media/beach.jpeg": "/static/media/beach.61aa11448967d01bd737.jpeg",
-    "static/media/sparsh-out.jpeg": "/static/media/sparsh-out.b229fc52636207908389.jpeg",
     "static/media/playbook.png": "/static/media/playbook.8f85b16d4b5ea94680d9.png",
     "static/media/leaf.jpeg": "/static/media/leaf.a29821f5d268d7476353.jpeg",
     "static/media/mountain.jpeg": "/static/media/mountain.5b533883b4c01c29d0d3.jpeg",
@@ -37,11 +37,11 @@
     "static/media/structureStrategy.png": "/static/media/structureStrategy.ecf613127c3bd64469e5.png",
     "index.html": "/index.html",
     "main.3eeec343.css.map": "/static/css/main.3eeec343.css.map",
-    "main.1889f827.js.map": "/static/js/main.1889f827.js.map",
+    "main.965262fe.js.map": "/static/js/main.965262fe.js.map",
     "787.a3e6b57b.chunk.js.map": "/static/js/787.a3e6b57b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3eeec343.css",
-    "static/js/main.1889f827.js"
+    "static/js/main.965262fe.js"
   ]
 }
