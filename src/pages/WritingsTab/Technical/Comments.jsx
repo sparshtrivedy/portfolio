@@ -8,7 +8,7 @@ import {
     Box,
     useMediaQuery
 } from "@mui/material";
-import sparsh from '../../../assets/images/sparsh.jpg';
+import peep from '../../../assets/images/peep.jpeg';
 import codecomments from '../../../assets/writings/codecomments.png';
 
 export default function Comments() {
@@ -25,7 +25,7 @@ export default function Comments() {
                         <Typography variant={'subtitle1'} mb={2}>My opinions on when comments are warranted and when they are not</Typography>
                         <Divider sx={{mb: 2}}/>
                         <Box sx={{display: 'flex', alignItems: 'center', mb: 2}}>
-                            <Avatar alt={'Sparsh Trivedy'} src={sparsh} sx={{marginRight: 2}} />
+                            <Avatar alt={'Sparsh Trivedy'} src={peep} sx={{marginRight: 2}} />
                             <Typography variant={'subtitle2'}>Sparsh Trivedy</Typography>
                         </Box>
                         <Divider />

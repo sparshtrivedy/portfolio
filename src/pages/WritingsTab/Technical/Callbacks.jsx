@@ -7,7 +7,7 @@ import {
     Typography,
     Box,
 } from "@mui/material";
-import sparsh from '../../../assets/images/sparsh.jpg';
+import peep from '../../../assets/images/peep.jpeg';
 import callbacks from '../../../assets/writings/callbacks.jpg';
 
 export default function Callbacks() {
@@ -24,7 +24,7 @@ export default function Callbacks() {
                         </Typography>
                         <Divider sx={{mb: 2}}/>
                         <Box sx={{display: 'flex', alignItems: 'center', mb: 2}}>
-                            <Avatar alt={'Sparsh Trivedy'} src={sparsh} sx={{marginRight: 2}} />
+                            <Avatar alt={'Sparsh Trivedy'} src={peep} sx={{marginRight: 2}} />
                             <Typography variant={'subtitle2'}>Sparsh Trivedy</Typography>
                         </Box>
                         <Divider />

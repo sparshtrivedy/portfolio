@@ -8,7 +8,7 @@ import {
     Box,
     useMediaQuery
 } from "@mui/material";
-import sparsh from '../../../assets/images/sparsh.jpg';
+import peep from '../../../assets/images/peep.jpeg';
 import singleton from '../../../assets/writings/singleton.png';
 import structureSingleton from '../../../assets/writings/structureSingleton.png';
 
@@ -26,7 +26,7 @@ export default function Singleton() {
                         <Typography variant={'subtitle1'} mb={2}>Answering how, when, why and why not to use the singleton design pattern</Typography>
                         <Divider sx={{mb: 2}}/>
                         <Box sx={{display: 'flex', alignItems: 'center', mb: 2}}>
-                            <Avatar alt={'Sparsh Trivedy'} src={sparsh} sx={{marginRight: 2}} />
+                            <Avatar alt={'Sparsh Trivedy'} src={peep} sx={{marginRight: 2}} />
                             <Typography variant={'subtitle2'}>Sparsh Trivedy</Typography>
                         </Box>
                         <Divider />
