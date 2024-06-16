@@ -20,7 +20,10 @@ import {
     Select,
     MenuItem,
     FormControl,
-    InputLabel
+    InputLabel,
+    Grid,
+    CardHeader,
+    ListSubheader
 } from '@mui/material';
 import PropTypes from 'prop-types';
 import skills from '../../data/skills.js';
@@ -122,183 +125,255 @@ export default function Skills() {
                     </FormControl>
                 </Box>
                 <CustomTabPanel value={value} index={0}>
-                    <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-                        {skills.languages.map((language) => (
-                            <Card key={language.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
+                <Box sx={{ flexGrow: 1 }}>
+                    <Grid container spacing={2}>
+                        {skills.languages.map((item) => (
+                        <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={item.name}>
+                            <Card sx={{ borderRadius: '20px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                <CardHeader
+                                    title={item.name}
+                                    sx={{ bgcolor: 'secondary.main' }}
+                                />
                                 <CardMedia
                                     component="img"
-                                    alt="express.js logo"
+                                    alt={`${item.name} logo`}
                                     height="140"
-                                    image={language.img}
-                                    sx={{bgcolor: 'media.main'}}
+                                    image={item.img}
+                                    sx={{ bgcolor: 'media.main' }}
                                 />
-                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {language.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Demonstrated in:
-                                        <List>
-                                            {language.demonstrated.map((project) => (
-                                                <ListItem key={project.name} sx={{paddingLeft: 0}}>
-                                                    <Link href={project.link}>{project.name}</Link>
-                                                </ListItem>
-                                            ))}
-                                        </List>
-                                    </Typography>
+                                <CardContent sx={{ bgcolor: 'secondary.main', flexGrow: 1, padding: 0, margin: 0 }}>
+                                    <List
+                                        subheader={
+                                          <ListSubheader component="div" id="nested-list-subheader" sx={{ bgcolor: 'secondary.main' }}>
+                                            Demonstrated in
+                                          </ListSubheader>
+                                        }
+                                    >
+                                    {item.demonstrated.map((project) => (
+                                        <ListItemButton
+                                            key={`${item.name}-${project.name}`}
+                                        >
+                                            <ListItemText>
+                                                <Link href={project.link}>{project.name}</Link>
+                                            </ListItemText>
+                                        </ListItemButton>
+                                    ))}
+                                    </List>
                                 </CardContent>
                             </Card>
-                        ))} 
-                    </Box>
+                        </Grid>
+                        ))}
+                    </Grid>
+                </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-                        {skills.backend.map((framework) => (
-                            <Card key={framework.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="express.js logo"
-                                    height="140"
-                                    image={framework.img}
-                                    sx={{bgcolor: 'media.main'}}
-                                />
-                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {framework.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Demonstrated in:
-                                        <List>
-                                            {framework.demonstrated.map((project) => (
-                                                <ListItem key={project.name} sx={{paddingLeft: 0}}>
+                        <Grid container spacing={2}>
+                            {skills.backend.map((item) => (
+                            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={item.name}>
+                                <Card sx={{ borderRadius: '20px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                    <CardHeader
+                                        title={item.name}
+                                        sx={{ bgcolor: 'secondary.main' }}
+                                    />
+                                    <CardMedia
+                                        component="img"
+                                        alt={`${item.name} logo`}
+                                        height="140"
+                                        image={item.img}
+                                        sx={{ bgcolor: 'media.main' }}
+                                    />
+                                    <CardContent sx={{ bgcolor: 'secondary.main', flexGrow: 1, padding: 0, margin: 0 }}>
+                                        <List
+                                            subheader={
+                                            <ListSubheader component="div" id="nested-list-subheader" sx={{ bgcolor: 'secondary.main' }}>
+                                                Demonstrated in
+                                            </ListSubheader>
+                                            }
+                                        >
+                                        {item.demonstrated.map((project) => (
+                                            <ListItemButton
+                                                key={`${item.name}-${project.name}`}
+                                            >
+                                                <ListItemText>
                                                     <Link href={project.link}>{project.name}</Link>
-                                                </ListItem>
-                                            ))}
+                                                </ListItemText>
+                                            </ListItemButton>
+                                        ))}
                                         </List>
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        ))} 
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            ))}
+                        </Grid>
                     </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-                        {skills.frontend.map((language) => (
-                            <Card key={language.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="express.js logo"
-                                    height="140"
-                                    image={language.img}
-                                    sx={{bgcolor: 'media.main'}}
-                                />
-                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {language.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Demonstrated in:
-                                        <List>
-                                            {language.demonstrated.map((project) => (
-                                                <ListItem key={project.name} sx={{paddingLeft: 0}}>
+                        <Grid container spacing={2}>
+                            {skills.frontend.map((item) => (
+                            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={item.name}>
+                                <Card sx={{ borderRadius: '20px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                    <CardHeader
+                                        title={item.name}
+                                        sx={{ bgcolor: 'secondary.main' }}
+                                    />
+                                    <CardMedia
+                                        component="img"
+                                        alt={`${item.name} logo`}
+                                        height="140"
+                                        image={item.img}
+                                        sx={{ bgcolor: 'media.main' }}
+                                    />
+                                    <CardContent sx={{ bgcolor: 'secondary.main', flexGrow: 1, padding: 0, margin: 0 }}>
+                                        <List
+                                            subheader={
+                                            <ListSubheader component="div" id="nested-list-subheader" sx={{ bgcolor: 'secondary.main' }}>
+                                                Demonstrated in
+                                            </ListSubheader>
+                                            }
+                                        >
+                                        {item.demonstrated.map((project) => (
+                                            <ListItemButton
+                                                key={`${item.name}-${project.name}`}
+                                            >
+                                                <ListItemText>
                                                     <Link href={project.link}>{project.name}</Link>
-                                                </ListItem>
-                                            ))}
+                                                </ListItemText>
+                                            </ListItemButton>
+                                        ))}
                                         </List>
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        ))} 
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            ))}
+                        </Grid>
                     </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={3}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-                        {skills.database.map((dbms) => (
-                            <Card key={dbms.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="express.js logo"
-                                    height="140"
-                                    image={dbms.img}
-                                    sx={{bgcolor: 'media.main'}}
-                                />
-                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {dbms.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Demonstrated in:
-                                        <List>
-                                            {dbms.demonstrated.map((project) => (
-                                                <ListItem key={project.name} sx={{paddingLeft: 0}}>
+                        <Grid container spacing={2}>
+                            {skills.database.map((item) => (
+                            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={item.name}>
+                                <Card sx={{ borderRadius: '20px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                    <CardHeader
+                                        title={item.name}
+                                        sx={{ bgcolor: 'secondary.main' }}
+                                    />
+                                    <CardMedia
+                                        component="img"
+                                        alt={`${item.name} logo`}
+                                        height="140"
+                                        image={item.img}
+                                        sx={{ bgcolor: 'media.main' }}
+                                    />
+                                    <CardContent sx={{ bgcolor: 'secondary.main', flexGrow: 1, padding: 0, margin: 0 }}>
+                                        <List
+                                            subheader={
+                                            <ListSubheader component="div" id="nested-list-subheader" sx={{ bgcolor: 'secondary.main' }}>
+                                                Demonstrated in
+                                            </ListSubheader>
+                                            }
+                                        >
+                                        {item.demonstrated.map((project) => (
+                                            <ListItemButton
+                                                key={`${item.name}-${project.name}`}
+                                            >
+                                                <ListItemText>
                                                     <Link href={project.link}>{project.name}</Link>
-                                                </ListItem>
-                                            ))}
+                                                </ListItemText>
+                                            </ListItemButton>
+                                        ))}
                                         </List>
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        ))} 
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            ))}
+                        </Grid>
                     </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={4}>
                     <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-                        {skills.cloud.map((platform) => (
-                            <Card key={platform.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="express.js logo"
-                                    height="140"
-                                    image={platform.img}
-                                    sx={{bgcolor: 'media.main'}}
-                                />
-                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {platform.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Demonstrated in:
-                                        <List>
-                                            {platform.demonstrated.map((project) => (
-                                                <ListItem key={project.name} sx={{paddingLeft: 0}}>
+                        <Grid container spacing={2}>
+                            {skills.cloud.map((item) => (
+                            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={item.name}>
+                                <Card sx={{ borderRadius: '20px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                    <CardHeader
+                                        title={item.name}
+                                        sx={{ bgcolor: 'secondary.main' }}
+                                    />
+                                    <CardMedia
+                                        component="img"
+                                        alt={`${item.name} logo`}
+                                        height="140"
+                                        image={item.img}
+                                        sx={{ bgcolor: 'media.main' }}
+                                    />
+                                    <CardContent sx={{ bgcolor: 'secondary.main', flexGrow: 1, padding: 0, margin: 0 }}>
+                                        <List
+                                            subheader={
+                                            <ListSubheader component="div" id="nested-list-subheader" sx={{ bgcolor: 'secondary.main' }}>
+                                                Demonstrated in
+                                            </ListSubheader>
+                                            }
+                                        >
+                                        {item.demonstrated.map((project) => (
+                                            <ListItemButton
+                                                key={`${item.name}-${project.name}`}
+                                            >
+                                                <ListItemText>
                                                     <Link href={project.link}>{project.name}</Link>
-                                                </ListItem>
-                                            ))}
+                                                </ListItemText>
+                                            </ListItemButton>
+                                        ))}
                                         </List>
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        ))} 
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            ))}
+                        </Grid>
                     </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={5}>
-                    <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
-                        {skills.ml.map((library) => (
-                            <Card key={library.name} sx={{ width: {xs: '100%', sm: 250}, marginBottom: 2, borderRadius: '20px' }}>
-                                <CardMedia
-                                    component="img"
-                                    alt="express.js logo"
-                                    height="140"
-                                    image={library.img}
-                                    sx={{bgcolor: 'media.main'}}
-                                />
-                                <CardContent sx={{bgcolor:'secondary.main', height: '100%'}}>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {library.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Demonstrated in:
-                                        <List>
-                                            {library.demonstrated.map((project) => (
-                                                <ListItem key={project.name} sx={{paddingLeft: 0}}>
+                    <Box style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap', alignItems: 'end'}}>
+                        <Grid container spacing={2}>
+                            {skills.ml.map((item) => (
+                            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={item.name}>
+                                <Card sx={{ borderRadius: '20px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                    <CardHeader
+                                        title={item.name}
+                                        sx={{ bgcolor: 'secondary.main' }}
+                                    />
+                                    <CardMedia
+                                        component="img"
+                                        alt={`${item.name} logo`}
+                                        height="140"
+                                        image={item.img}
+                                        sx={{ bgcolor: 'media.main' }}
+                                    />
+                                    <CardContent sx={{ bgcolor: 'secondary.main', flexGrow: 1, padding: 0, margin: 0 }}>
+                                        <List
+                                            subheader={
+                                            <ListSubheader component="div" id="nested-list-subheader" sx={{ bgcolor: 'secondary.main' }}>
+                                                Demonstrated in
+                                            </ListSubheader>
+                                            }
+                                        >
+                                        {item.demonstrated.map((project) => (
+                                            <ListItemButton
+                                                key={`${item.name}-${project.name}`}
+                                            >
+                                                <ListItemText>
                                                     <Link href={project.link}>{project.name}</Link>
-                                                </ListItem>
-                                            ))}
+                                                </ListItemText>
+                                            </ListItemButton>
+                                        ))}
                                         </List>
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        ))} 
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                            ))}
+                        </Grid>
                     </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={6}>

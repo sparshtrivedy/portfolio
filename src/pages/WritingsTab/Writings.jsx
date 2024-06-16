@@ -4,7 +4,8 @@ import {
     Typography,
     Box,
     Tab,
-    Tabs
+    Tabs,
+    Grid
 } from "@mui/material";
 import HeaderCard from '../../components/HeaderCard';
 import WritingCard from "./WritingCard";
@@ -69,28 +70,36 @@ export default function Writings() {
                 </Box>
                 <CustomTabPanel value={value} index={0}>
                     <Box sx={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
+                        <Grid container spacing={2}>
                         {writings.map((writing) => (
-                            <WritingCard 
-                                key={writing.id}
-                                image={writing.image}
-                                title={writing.title} 
-                                description={writing.description} 
-                                id={writing.id} 
-                            />
+                            <Grid item xs={12} sm={6} md={4} key={writing.id}>
+                                <WritingCard 
+                                    key={writing.id}
+                                    image={writing.image}
+                                    title={writing.title} 
+                                    description={writing.description} 
+                                    id={writing.id} 
+                                />
+                            </Grid>
                         ))}
+                        </Grid>
                     </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
                     <Box sx={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
+                        <Grid container spacing={2}>
                         {fictional.map((writing) => (
-                            <WritingCard 
-                                key={writing.id}
-                                image={writing.image}
-                                title={writing.title} 
-                                description={writing.description} 
-                                id={writing.id} 
-                            />
+                            <Grid item xs={12} sm={6} md={4} key={writing.id}>
+                                <WritingCard 
+                                    key={writing.id}
+                                    image={writing.image}
+                                    title={writing.title} 
+                                    description={writing.description} 
+                                    id={writing.id} 
+                                />
+                            </Grid>
                         ))}
+                        </Grid>
                     </Box>
                 </CustomTabPanel>
             </Box>

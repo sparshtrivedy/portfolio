@@ -40,7 +40,7 @@ export default function WritingCard({ image, title, description, id }) {
 
     return (
         <>
-            <Card sx={{ maxWidth: {xs: '100%', sm: 500}, borderRadius: '20px', mb: 2 }}>
+            <Card sx={{ borderRadius: '20px', mb: 2, height: '100%' }}>
                 <CardMedia
                     component="img"
                     sx={{ height: 340 }}
@@ -55,7 +55,7 @@ export default function WritingCard({ image, title, description, id }) {
                         {description}
                     </Typography>
                 </CardContent>
-                <CardActions sx={{mb: 2}}>
+                <CardActions>
                     <Button size="small" onClick={copyToClipboard} id={id} sx={{mr: 2}}>
                         <ShareOutlined sx={{mr: 1}} />
                         Share
