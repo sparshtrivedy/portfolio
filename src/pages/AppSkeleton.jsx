@@ -33,6 +33,9 @@ import Writings from './WritingsTab/Writings';
 import menuitems from '../data/menuitems';
 import Singleton from './WritingsTab/Technical/Singleton';
 import Strategy from './WritingsTab/Technical/Strategy';
+import BikeBandit from './WritingsTab/Fictional/BikeBandit';
+import DestressTrip from './WritingsTab/Fictional/DestressTrip';
+import LoveRekindled from './WritingsTab/Fictional/LoveRekindled';
 import peep from '../assets/images/peep.jpeg';
 import Comments from './WritingsTab/Technical/Comments';
 import { useTheme } from '@mui/material/styles';
@@ -176,6 +179,9 @@ function AppSkeleton() {
                     <Route path='/writings/strategy' element={<Strategy />} />
                     <Route path='/writings/comments' element={<Comments />} />
                     <Route path='/writings/callbacks' element={<Callbacks />} />
+                    <Route path='/writings/bike-bandit' element={<BikeBandit />} />
+                    <Route path='/writings/destress-trip' element={<DestressTrip />} />
+                    <Route path='/writings/love-rekindled' element={<LoveRekindled />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
             </Box>

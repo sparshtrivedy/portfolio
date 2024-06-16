@@ -1,5 +1,20 @@
 const courses = [
     {
+        title: 'CPSC 313',
+        description: 'Computer Hardware and Operating Systems',
+        term: '2023W2'
+    },
+    {
+        title: 'CPSC 314',
+        description: 'Computer Graphics',
+        term: '2023W2'
+    },
+    {
+        title: 'CPSC 317',
+        description: 'Internet Computing',
+        term: '2023W2'
+    },
+    {
         title: 'CPSC 320',
         description: 'Intermediate Algorithm Design and Analysis',
         term: '2023W1'
@@ -78,19 +93,9 @@ const courses = [
 
 const currentTerm = [
     {
-        title: 'CPSC 313',
-        description: 'Computer Hardware and Operating Systems',
-        term: '2023W2'
-    },
-    {
-        title: 'CPSC 314',
-        description: 'Computer Graphics',
-        term: '2023W2'
-    },
-    {
-        title: 'CPSC 317',
-        description: 'Internet Computing',
-        term: '2023W2'
+        title: 'CPSC 398',
+        description: 'Cooperative Work Placement III',
+        term: '2024S'
     }
 ]
 

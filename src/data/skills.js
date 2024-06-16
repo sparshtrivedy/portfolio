@@ -303,6 +303,16 @@ const skills = {
                     link: '/#/projects/#notesapi'
                 }
             ]
+        },
+        {
+            name: 'Firebase',
+            img: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg',
+            demonstrated: [
+                {
+                    name: 'FairFare',
+                    link: 'https://fairfare-cbb02.web.app/'
+                }
+            ]
         }
     ],
     ml: [

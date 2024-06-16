@@ -1,7 +1,17 @@
 const experiences = [
     {
+        id: 'tegus-swe',
+        duration: 'May 2024 - present',
+        title: 'Software Engineering Co-op',
+        location: 'Tegus',
+        description: [
+            'Developing and maintaining excel add-in for financial experts to access Tegus models directly in Excel, enabling them to make data-driven decisions.',
+        ],
+        skills: ['.NET, C#, React.js, TypeScript']
+    },
+    {
         id: 'ubc-cs-ta',
-        duration: 'Sep 2023 - Present',
+        duration: 'Sep 2023 - Apr 2024',
         title: 'Teaching Assistant',
         location: 'CS Department @ UBC',
         description: [
@@ -26,7 +36,7 @@ const experiences = [
     {
         id: 'bgc-software-dev',
         duration: 'Sep 2022 - Apr 2023',
-        title: 'Software Developer',
+        title: 'Software Developer Co-op',
         location: 'BGC Engineering',
         description: [
             'Developed data table component for risk assessment and management platform, enabling users to view and edit instrumentation data in a tabular format.',

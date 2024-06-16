@@ -2,6 +2,9 @@ import singleton from '../assets/writings/singleton.png'
 import strategy from '../assets/writings/strategy.png'
 import codecomments from '../assets/writings/codecomments.png'
 import callbacks from '../assets/writings/callbacks.jpg'
+import bike from '../assets/writings/bike.jpg'
+import seattle from '../assets/writings/seattle.jpg'
+import airplane from '../assets/writings/airplane.jpg'
 
 const writings = [
     {
@@ -30,4 +33,25 @@ const writings = [
     }
 ];
 
-export default writings;
+const fictional = [
+    {
+        image: bike,
+        title: 'The Bike Bandit',
+        description: 'As a kid, I loved riding bikes around the neighborhood. However, as the younger sibling, I was forced to settle for the hand-me-down hello kitty bike. This is the story of how I came up with a creative solution to my bike problem.',
+        id: 'bike-bandit'
+    },
+    {
+        image: seattle,
+        title: 'The Stressful De-stress Trip',
+        description: 'After a stressful semester at University, Ria decided to take a trip to Seattle to relax. However, things didn\'t go as planned. This is the story of her stressful de-stress trip.',
+        id: 'destress-trip'
+    },
+    {
+        image: airplane,
+        title: 'Love Rekindled',
+        description: "Naina prepares for a tense journey with her ex-boyfriend, Kabir, to attend their best friend's wedding. As they navigate shared memories, lingering emotions, and new uncertainties, they discover that love sometimes deserves a second chance.",
+        id: 'love-rekindled'
+    }
+];
+
+export { writings, fictional }

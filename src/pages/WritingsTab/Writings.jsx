@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import HeaderCard from '../../components/HeaderCard';
 import WritingCard from "./WritingCard";
-import writings from '../../data/writings';
+import { writings, fictional } from "../../data/writings";
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -64,7 +64,7 @@ export default function Writings() {
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                         <Tab label="Technical" {...a11yProps(0)} />
-                        <Tab label="Fictional" {...a11yProps(1)} />
+                        <Tab label="Non-technical" {...a11yProps(1)} />
                     </Tabs>
                 </Box>
                 <CustomTabPanel value={value} index={0}>
@@ -81,7 +81,17 @@ export default function Writings() {
                     </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
-                    Coming soon...
+                    <Box sx={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
+                        {fictional.map((writing) => (
+                            <WritingCard 
+                                key={writing.id}
+                                image={writing.image}
+                                title={writing.title} 
+                                description={writing.description} 
+                                id={writing.id} 
+                            />
+                        ))}
+                    </Box>
                 </CustomTabPanel>
             </Box>
         </Box>

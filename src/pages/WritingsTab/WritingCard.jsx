@@ -20,16 +20,7 @@ export default function WritingCard({ image, title, description, id }) {
     const [openSnackbar, setOpenSnackbar] = useState(false);
 
     const copyToClipboard = async (e) => {
-        let url = "https://www.sparshtrivedy.com/#/writings"
-        if (e.target.id === 'comments') {
-            url = "https://www.sparshtrivedy.com/#/writings/comments"
-        } else if (e.target.id === 'strategy') {
-            url = "https://www.sparshtrivedy.com/#/writings/strategy"
-        } else if (e.target.id === 'singleton') {
-            url = "https://www.sparshtrivedy.com/#/writings/singleton"
-        } else if (e.target.id === 'callbacks') {
-            url = "https://www.sparshtrivedy.com/#/writings/callbacks"
-        }
+        const  url = `https://www.sparshtrivedy.com/#/writings/${e.target.id}`
 
         await navigator.clipboard.writeText(url)
         .then(() => {

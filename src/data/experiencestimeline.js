@@ -3,11 +3,19 @@ import ubc from '../assets/images/ubc.jpeg';
 import fof from '../assets/images/fof.jpeg';
 import bgc from '../assets/images/bgc.jpeg';
 import browns from '../assets/images/browns.png';
+import tegus from '../assets/images/tegus.jpeg';
 
 const experiencestimeline = [
     {
+      id: 'tegus-swe',
+      duration: 'May 2024 - Present',
+      title: 'SWE Co-op',
+      location: 'Tegus',
+      icon: <Avatar alt='tegus logo' src={tegus} sx={{ width: '3em', height: '3em' }} />,
+    },
+    {
       id: 'ubc-cs-ta',
-      duration: 'Sep 2023 - Present',
+      duration: 'Sep 2023 - Apr 2024',
       title: 'Teaching Assistant',
       location: 'CS Department @ UBC',
       icon: <Avatar alt='ubc logo' src={ubc} sx={{ width: '3em', height: '3em' }} />,
@@ -22,7 +30,7 @@ const experiencestimeline = [
     {
       id: 'bgc-software-dev',
       duration: 'Sep 2022 - Apr 2023',
-      title: 'Software Developer',
+      title: 'SDE Co-op',
       location: 'BGC Engineering',
       icon: <Avatar alt='bgc logo' src={bgc} sx={{ width: '3em', height: '3em'}} />,
     },
