@@ -1,16 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.3eeec343.css",
-    "main.js": "/static/js/main.fd626f07.js",
+    "main.js": "/static/js/main.286f43d1.js",
     "static/js/787.a3e6b57b.chunk.js": "/static/js/787.a3e6b57b.chunk.js",
     "static/media/playbook.mov": "/static/media/playbook.570c76317f3858d485dc.mov",
     "static/media/woodworks.mp4": "/static/media/woodworks.25bdf268a2c1cf2cec83.mp4",
     "static/media/getittogether.mov": "/static/media/getittogether.b608fcee619cd686ce36.mov",
     "static/media/vibing.mp4": "/static/media/vibing.5635db5153cb22ca76ad.mp4",
+    "static/media/bike.jpg": "/static/media/bike.d178972a995b74535c9c.jpg",
+    "static/media/cycle.jpg": "/static/media/cycle.1544865d525789ab9a0d.jpg",
     "static/media/callbacks.jpg": "/static/media/callbacks.8af24cd19b5b646c3db0.jpg",
+    "static/media/seattle.jpg": "/static/media/seattle.daa113610835873cbf08.jpg",
     "static/media/campus.jpeg": "/static/media/campus.b3a4e7411a22bb81e7e2.jpeg",
     "static/media/trees.jpeg": "/static/media/trees.fbbceeca3717a0139dc9.jpeg",
     "static/media/nitobe.jpeg": "/static/media/nitobe.419cde4944816931338f.jpeg",
+    "static/media/airplane.jpg": "/static/media/airplane.fa31f64ef5194a8d474f.jpg",
     "static/media/cafe-kiosk.jpg": "/static/media/cafe-kiosk.c098cb48e8d7dc232c3d.jpg",
     "static/media/snow.jpeg": "/static/media/snow.9a1550157fb4a0311bf9.jpeg",
     "static/media/restaurant.jpeg": "/static/media/restaurant.15c599b6ece6ac5220d1.jpeg",
@@ -36,11 +40,11 @@
     "static/media/structureStrategy.png": "/static/media/structureStrategy.ecf613127c3bd64469e5.png",
     "index.html": "/index.html",
     "main.3eeec343.css.map": "/static/css/main.3eeec343.css.map",
-    "main.fd626f07.js.map": "/static/js/main.fd626f07.js.map",
+    "main.286f43d1.js.map": "/static/js/main.286f43d1.js.map",
     "787.a3e6b57b.chunk.js.map": "/static/js/787.a3e6b57b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3eeec343.css",
-    "static/js/main.fd626f07.js"
+    "static/js/main.286f43d1.js"
   ]
 }
