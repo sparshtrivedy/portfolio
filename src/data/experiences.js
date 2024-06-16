@@ -5,7 +5,7 @@ const experiences = [
         title: 'Software Engineering Co-op',
         location: 'Tegus',
         description: [
-            'Developing and maintaining excel add-in for financial experts to access Tegus models directly in Excel, enabling them to make data-driven decisions.',
+            'Developing and maintaining excel add-in, enabling investors to update their customized models with the latest company data right in Excel.',
         ],
         skills: ['.NET, C#, React.js, TypeScript']
     },
