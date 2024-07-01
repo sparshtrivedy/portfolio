@@ -1,10 +1,8 @@
 import playbook from '../assets/videos/playbook.mov';
-import playbookDiagram from '../assets/images/playbook.png';
 import notesapi from '../assets/images/notes-api.png';
 import getittogether from '../assets/videos/getittogether.mov';
 import woodworks from '../assets/videos/woodworks.mp4';
 import vibing from '../assets/videos/vibing.mp4';
-import unpruned from '../assets/images/un-pruned.png';
 import pruned from '../assets/images/pruned.png';
 import cafekiosk from '../assets/images/cafe-kiosk.jpg'
 
@@ -20,18 +18,11 @@ const projects = [
             'Ensured data security through JWT web token-based authentication and authorization.'
         ],
         skills: 'Express.js, React.js, PostgreSQL, AWS, Nginx',
-        media: [
-            {
-                label: 'PlayBook',
-                item: playbook,
-                type: 'video'
-            },
-            {
-                label: 'PlayBook Diagram',
-                item: playbookDiagram,
-                type: 'image'
-            }
-        ],
+        media: {
+            label: 'PlayBook',
+            item: playbook,
+            type: 'video'
+        },
         view: 'http://playbookmanager.xyz/landing',
         github: 'https://github.com/sparshtrivedy/PlayBook',
     },
@@ -46,13 +37,11 @@ const projects = [
             'Utilized CloudFormation for infrastructure as code and serverless framework for deployment.'
         ],
         skills: 'AWS',
-        media: [
-            {
-                label: 'Notes API Diagram',
-                item: notesapi,
-                type: 'image'
-            }
-        ],
+        media: {
+            label: 'Notes API Diagram',
+            item: notesapi,
+            type: 'img'
+        },
         view: '',
         github: 'https://github.com/sparshtrivedy/notes-rest-api',
     },
@@ -67,13 +56,11 @@ const projects = [
             'Improved user experience by implementing a search feature allowing users to search for tasks by name, status, and type.'
         ],
         skills: 'Express.js, Node.js, React.js, MongoDB (NoSQL)',
-        media: [
-            {
-                label: 'Get-it-together',
-                item: getittogether,
-                type: 'video'
-            }
-        ],
+        media: {
+            label: 'Get-it-together',
+            item: getittogether,
+            type: 'video'
+        },
         view: 'https://get-it-together-wlk9.onrender.com/landing',
         github: 'https://github.com/sparshtrivedy/get-it-together',
         
@@ -89,13 +76,11 @@ const projects = [
             'Enabled exclusive catalog access through user login and registration.',     
         ],
         skills: 'TypeScript, C#, React, .NET, Redux',
-        media: [
-            {
-                label: 'WoodWorks',
-                item: woodworks,
-                type: 'video'
-            }
-        ],
+        media: {
+            label: 'WoodWorks',
+            item: woodworks,
+            type: 'video'
+        },
         view: '',
         github: 'https://github.com/sparshtrivedy/WoodWorks',
     },
@@ -109,13 +94,11 @@ const projects = [
             'Integrated the ability for users to add selected songs to a playlist and customize the playlist name.'
         ],
         skills: 'HTML, CSS, JavaScript, React.js',
-        media: [
-            {
-                label: 'Vibing',
-                item: vibing,
-                type: 'video'
-            }
-        ],
+        media: {
+            label: 'Vibing',
+            item: vibing,
+            type: 'video'
+        },
         view: 'http://vibing.surge.sh/',
         github: 'https://github.com/sparshtrivedy/vibing',
     },
@@ -130,18 +113,11 @@ const projects = [
             'Utilized the render function to visualize the effects of operations on images, using the tree\'s root node as input.'
         ],
         skills: 'C++, Data Structures and Algorithms',
-        media: [
-            {
-                label: 'Un-pruned Tree',
-                item: unpruned,
-                type: 'image'
-            },
-            {
-                label: 'Pruned Tree',
-                item: pruned,
-                type: 'image'
-            }
-        ],
+        media: {
+            label: 'Pruned Tree',
+            item: pruned,
+            type: 'img'
+        },
         view: '',
         github: 'https://github.com/sparshtrivedy/Image-Partitioning-Trees',
     },
@@ -156,13 +132,11 @@ const projects = [
             'Developed the application adhering to software design principles and verified its functionality through JUnit testing.'
         ],
         skills: 'Java, Swing, JUnit, Object Oriented Programming, Test Driven Development',
-        media: [
-            {
-                label: 'Cafe Kiosk GUI',
-                item: cafekiosk,
-                type: 'image'
-            }
-        ],
+        media: {
+            label: 'Cafe Kiosk GUI',
+            item: cafekiosk,
+            type: 'img'
+        },
         view: '',
         github: 'https://github.com/sparshtrivedy/Cafe-Kiosk',
     }
