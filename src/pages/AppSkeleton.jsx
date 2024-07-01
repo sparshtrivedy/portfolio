@@ -13,6 +13,7 @@ import {
     CssBaseline,
     Avatar,
     Divider,
+    ListItemIcon
 } from '@mui/material';
 import { 
     Link, 
@@ -28,8 +29,6 @@ import Experience from './ExperienceTab/Experience';
 import Projects from './ProjectsTab/Projects';
 import Volunteering from './VolunteeringTab/Volunteering';
 import Education from './EducationTab/Education';
-import Connect from './ConnectTab/Connect';
-import Writings from './WritingsTab/Writings';
 import menuitems from '../data/menuitems';
 import Singleton from './WritingsTab/Technical/Singleton';
 import Strategy from './WritingsTab/Technical/Strategy';
@@ -48,7 +47,7 @@ function AppSkeleton() {
     const theme = useTheme();
     const colorMode = React.useContext(ColorModeContext);
 
-    const drawerWidth = 150;
+    const drawerWidth = 250;
 
     const location = useLocation();
 
@@ -73,26 +72,30 @@ function AppSkeleton() {
     const drawer = (
         <Box sx={{bgcolor: 'secondary.main', m: 0}}>
             <List>
-                <ListItem disablePadding>
-                    <ListItemButton sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <ListItem disablePadding sx={{ marginY: 1, paddingX: 1 }}>
+                    <ListItemButton sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: 5 }}>
                         <Avatar alt='sparsh trivedy' src={peep} sx={{ width: '3em', height: '3em' }} />
                     </ListItemButton>
                 </ListItem>
                 <Divider />
                 {menuitems.map((item) => (
                 <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit' }} key={item.id}>
-                    <ListItem disablePadding>
-                        <ListItemButton sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}} selected={focussed === item.id}>
-                            {item.icon}
+                    <ListItem disablePadding sx={{ marginY: 1, paddingX: 1 }}>
+                        <ListItemButton selected={focussed === item.id} sx={{ display: 'flex', justifyContent: 'center', borderRadius: 5, padding: 2 }}>
+                            <ListItemIcon>
+                                {item.icon}
+                            </ListItemIcon>
                             <ListItemText primary={item.text} />
                         </ListItemButton>
                     </ListItem>
                 </Link>
                 ))}
                 <Divider />
-                <ListItem disablePadding>
-                    <ListItemButton sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}} onClick={colorMode.toggleColorMode}>
-                        {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+                <ListItem disablePadding sx={{ marginY: 1, paddingX: 1 }}>
+                    <ListItemButton onClick={colorMode.toggleColorMode} sx={{ display: 'flex', justifyContent: 'center', borderRadius: 5, padding: 2 }}>
+                        <ListItemIcon>
+                            {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+                        </ListItemIcon>
                         <ListItemText primary={theme.palette.mode === 'dark' ? 'Light mode' : 'Dark mode'} />
                     </ListItemButton>
                 </ListItem>
@@ -173,8 +176,7 @@ function AppSkeleton() {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/volunteering" element={<Volunteering />} />
                     <Route path='/education' element={<Education />} />
-                    <Route path='/connect' element={<Connect />} />
-                    <Route path='/writings' element={<Writings />} />
+                    {/* <Route path='/writings' element={<Writings />} /> */}
                     <Route path='/writings/singleton' element={<Singleton />} />
                     <Route path='/writings/strategy' element={<Strategy />} />
                     <Route path='/writings/comments' element={<Comments />} />

@@ -8,7 +8,8 @@ import {
     Button,
     Snackbar,
     Alert,
-    
+    Box,
+    Chip
 } from "@mui/material";
 import { 
     FileOpenOutlined, 
@@ -16,7 +17,7 @@ import {
     InventoryOutlined
 } from "@mui/icons-material";
 
-export default function WritingCard({ image, title, description, id }) {
+export default function WritingCard({ image, title, description, id, tag }) {
     const [openSnackbar, setOpenSnackbar] = useState(false);
 
     const copyToClipboard = async (e) => {
@@ -40,31 +41,39 @@ export default function WritingCard({ image, title, description, id }) {
 
     return (
         <>
-            <Card sx={{ borderRadius: '20px', mb: 2, height: '100%' }}>
+            <Card sx={{ display: 'flex', marginY: 2, borderRadius: 5 }} elevation={3}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', padding: 2 }}>
+                    <CardContent>
+                        <Typography gutterBottom variant="h6" component={"div"}>
+                            {title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {description}
+                        </Typography>
+                        <Box sx={{ marginTop: 2 }}>
+                            {tag === 'Technical' ? 
+                                <Chip label={tag} color="primary" /> :
+                                <Chip label={tag} color="secondary" />
+                            }
+                        </Box>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small" onClick={copyToClipboard} id={id} sx={{mr: 2}}>
+                            <ShareOutlined sx={{mr: 1}} />
+                            Share
+                        </Button>
+                        <Button size="small" href={`/#/writings/${id}`}>
+                            <FileOpenOutlined sx={{mr: 1}} />
+                            Read
+                        </Button>
+                    </CardActions>
+                </Box>
                 <CardMedia
                     component="img"
-                    sx={{ height: 340 }}
+                    sx={{ width: '40%' }}
                     image={image}
                     title="singleton"
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component={"div"}>
-                        {title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {description}
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small" onClick={copyToClipboard} id={id} sx={{mr: 2}}>
-                        <ShareOutlined sx={{mr: 1}} />
-                        Share
-                    </Button>
-                    <Button size="small" href={`/#/writings/${id}`}>
-                        <FileOpenOutlined sx={{mr: 1}} />
-                        Read
-                    </Button>
-                </CardActions>
             </Card>
             <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{vertical: 'top', horizontal: 'center'}}>
                 <Alert icon={<InventoryOutlined />} severity="success" onClose={handleClose} sx={{ width: '100%' }}>

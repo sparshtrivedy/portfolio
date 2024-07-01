@@ -2,7 +2,7 @@ const experiences = [
     {
         id: 'tegus-swe',
         duration: 'May 2024 - present',
-        title: 'Software Engineering Co-op',
+        title: 'Software Engineer Co-op',
         location: 'Tegus',
         description: [
             'Developing and maintaining excel add-in, enabling investors to update their customized models with the latest company data right in Excel.',

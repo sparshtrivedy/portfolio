@@ -32,7 +32,7 @@ export default function ExperienceAccordian() {
     }, [location]);
 
     return (
-        <div>
+        <>
             {experiences.map((experience) => (
             <Accordion expanded={expanded === experience.id} onChange={handleChange(experience.id)} key={experience.id}>
                 <AccordionSummary
@@ -65,6 +65,6 @@ export default function ExperienceAccordian() {
                 </AccordionDetails>
             </Accordion>
             ))}
-        </div>
+        </>
     );
 }

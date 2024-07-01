@@ -6,13 +6,15 @@ import {
     LanOutlined, 
     PublishedWithChangesOutlined 
 } from '@mui/icons-material';
-import ssms from '../assets/ssms.svg';
+import { SiCplusplus, SiCsharp, SiJavascript, SiPython, SiTypescript, SiC, SiExpress, SiNodedotjs, SiDotnet, SiDjango, SiHtml5, SiCss3, SiReact, SiMicrosoftsqlserver, SiPostgresql, SiSqlite, SiMongodb, SiAmazonaws, SiFirebase, SiScikitlearn, SiPandas, SiNumpy } from 'react-icons/si';
+import { FaJava } from "react-icons/fa6";
 
 const skills = {
     languages: [
         {
             name: 'JavaScript',
-            img: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+            img: <SiJavascript />,
+            color: '#f0db4f',
             demonstrated: [
                 {
                     name: 'PlayBook',
@@ -34,7 +36,8 @@ const skills = {
         },
         {
             name: 'TypeScript',
-            img: 'https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg',
+            img: <SiTypescript />,
+            color: '#007acc',
             demonstrated: [
                 {
                     name: 'WoodWorks',
@@ -48,7 +51,8 @@ const skills = {
         },
         {
             name: 'Python',
-            img: 'https://www.vectorlogo.zone/logos/python/python-ar21.svg',
+            img: <SiPython />,
+            color: '#306998',
             demonstrated: [
                 {
                     name: 'UBC CS Department',
@@ -62,7 +66,8 @@ const skills = {
         },
         {
             name: 'Java',
-            img: 'https://www.vectorlogo.zone/logos/java/java-ar21.svg',
+            img: <FaJava />,
+            color: '#007396',
             demonstrated: [
                 {
                     name: 'Cafe Kiosk',
@@ -72,7 +77,8 @@ const skills = {
         },
         {
             name: 'C#',
-            img: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg',
+            img: <SiCsharp />,
+            color: '#9b4993',
             demonstrated: [
                 {
                     name: 'WoodWorks',
@@ -86,7 +92,8 @@ const skills = {
         },
         {
             name: 'C++',
-            img: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg',
+            img: <SiCplusplus />,
+            color: '#00599c',
             demonstrated: [
                 {
                     name: 'Image Partitioning Trees',
@@ -96,7 +103,8 @@ const skills = {
         },
         {
             name: 'C',
-            img: 'https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg',
+            img: <SiC />,
+            color: '#a8b9cc',
             demonstrated: [
                 {
                     name: 'UBC courses',
@@ -108,7 +116,8 @@ const skills = {
     backend: [
         {
             name: 'Express.js',
-            img: 'https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg',
+            img: <SiExpress />,
+            color: '#000000',
             demonstrated: [
                 {
                     name: 'PlayBook',
@@ -122,7 +131,8 @@ const skills = {
         },
         {
             name: 'Node.js',
-            img: 'https://www.vectorlogo.zone/logos/nodejs/nodejs-ar21.svg',
+            img: <SiNodedotjs />,
+            color: '#68a063',
             demonstrated: [
                 {
                     name: 'PlayBook',
@@ -136,7 +146,8 @@ const skills = {
         },
         {
             name: '.NET',
-            img: 'https://www.vectorlogo.zone/logos/dotnet/dotnet-ar21.svg',
+            img: <SiDotnet />,
+            color: '#512bd4',
             demonstrated: [
                 {
                     name: 'WoodWorks',
@@ -150,7 +161,8 @@ const skills = {
         },
         {
             name: 'Django',
-            img: 'https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg',
+            img: <SiDjango />,
+            color: '#092e20',
             demonstrated: [
                 {
                     name: 'UBC Faculty of Forestry',
@@ -162,7 +174,8 @@ const skills = {
     frontend: [
         {
             name: 'HTML',
-            img: 'https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg',
+            img: <SiHtml5 />,
+            color: '#e34f26',
             demonstrated: [
                 {
                     name: 'PlayBook',
@@ -192,7 +205,8 @@ const skills = {
         },
         {
             name: 'CSS',
-            img: 'https://www.vectorlogo.zone/logos/w3_css/w3_css-ar21.svg',
+            img: <SiCss3 />,
+            color: '#1572b6',
             demonstrated: [
                 {
                     name: 'PlayBook',
@@ -222,7 +236,8 @@ const skills = {
         },
         {
             name: 'React',
-            img: 'https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg',
+            img: <SiReact />,
+            color: '#61dafb',
             demonstrated: [
                 {
                     name: 'PlayBook',
@@ -250,7 +265,8 @@ const skills = {
     database: [
         {
             name: 'MS SQL Server',
-            img: ssms,
+            img: <SiMicrosoftsqlserver />,
+            color: '#cc2927',
             demonstrated: [
                 {
                     name: 'BGC Engineering',
@@ -260,7 +276,8 @@ const skills = {
         },
         {
             name: 'PostgreSQL',
-            img: 'https://www.vectorlogo.zone/logos/postgresql/postgresql-ar21.svg',
+            img: <SiPostgresql />,
+            color: '#336791',
             demonstrated: [
                 {
                     name: 'PlayBook',
@@ -274,7 +291,8 @@ const skills = {
         },
         {
             name: 'SQLite',
-            img: 'https://www.vectorlogo.zone/logos/sqlite/sqlite-ar21.svg',
+            img: <SiSqlite />,
+            color: '#003b57',
             demonstrated: [
                 {
                     name: 'UBC Faculty of Forestry',
@@ -284,7 +302,8 @@ const skills = {
         },
         {
             name: 'MongoDB',
-            img: 'https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg',
+            img: <SiMongodb />,
+            color: '#47a248',
             demonstrated: [
                 {
                     name: 'Get-it-together',
@@ -296,7 +315,8 @@ const skills = {
     cloud: [
         {
             name: 'AWS',
-            img: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+            img: <SiAmazonaws />,
+            color: '#232f3e',
             demonstrated: [
                 {
                     name: 'Notes REST API',
@@ -306,7 +326,8 @@ const skills = {
         },
         {
             name: 'Firebase',
-            img: 'https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg',
+            img: <SiFirebase />,
+            color: '#ffca28',
             demonstrated: [
                 {
                     name: 'FairFare',
@@ -318,7 +339,8 @@ const skills = {
     ml: [
         {
             name: 'Scikit Learn',
-            img: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg',
+            img: <SiScikitlearn />,
+            color: '#f7931e',
             demonstrated: [
                 {
                     name: 'UBC CS Department',
@@ -328,7 +350,8 @@ const skills = {
         },
         {
             name: 'Pandas',
-            img: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg',
+            img: <SiPandas />,
+            color: '#150458',
             demonstrated: [
                 {
                     name: 'UBC CS Department',
@@ -338,7 +361,8 @@ const skills = {
         },
         {
             name: 'NumPy',
-            img: 'https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg',
+            img: <SiNumpy />,
+            color: '#013243',
             demonstrated: [
                 {
                     name: 'UBC CS Department',

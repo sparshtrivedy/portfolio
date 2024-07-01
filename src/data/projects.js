@@ -19,7 +19,7 @@ const projects = [
             'Optimized DB structure by implementing weak entity relationships and ISA hierarchies, minimizing redundancy by normalizing to BCNF.',
             'Ensured data security through JWT web token-based authentication and authorization.'
         ],
-        skills: 'Express.js, React.js, PostgreSQL, AWS RDS, EC2, Nginx',
+        skills: 'Express.js, React.js, PostgreSQL, AWS, Nginx',
         media: [
             {
                 label: 'PlayBook',
@@ -45,7 +45,7 @@ const projects = [
             'Ensured avialability by adding unit tests for all API endpoints.',
             'Utilized CloudFormation for infrastructure as code and serverless framework for deployment.'
         ],
-        skills: 'AWS Cognito, DynamoDB, CodePipeline, CodeBuild, CloudFormation, WAF',
+        skills: 'AWS',
         media: [
             {
                 label: 'Notes API Diagram',
@@ -88,7 +88,7 @@ const projects = [
             'Established database schema using Entity Framework\'s code-first approach and performed data seeding.',
             'Enabled exclusive catalog access through user login and registration.',     
         ],
-        skills: 'TypeScript, C#, React, .NET, Entity Framework, Redux',
+        skills: 'TypeScript, C#, React, .NET, Redux',
         media: [
             {
                 label: 'WoodWorks',

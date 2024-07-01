@@ -6,8 +6,6 @@ import {
     VolunteerActivismOutlined,
     SchoolOutlined,
     AutoAwesomeOutlined,
-    ConnectWithoutContactOutlined,
-    ArticleOutlined,
 } from '@mui/icons-material';
 
 const menuitems = [
@@ -52,18 +50,6 @@ const menuitems = [
       icon: <SchoolOutlined />,
       text: 'Education',
       link: '/education',
-    },
-    {
-      id: 'connect',
-      icon: <ConnectWithoutContactOutlined />,
-      text: 'Connect',
-      link: '/connect',
-    },
-    {
-      id: 'writings',
-      icon: <ArticleOutlined />,
-      text: 'Writings',
-      link: '/writings',
     },
 ]
 

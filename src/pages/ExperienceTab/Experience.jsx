@@ -31,7 +31,6 @@ export default function Experience() {
                     <Grid item xs={12} sm={5}>
                         <Paper elevation={3}
                             sx={{
-                                backgroundColor: 'secondary.main',
                                 height: '100%',
                                 display: 'flex',
                                 alignItems: 'center',
