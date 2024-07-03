@@ -124,7 +124,7 @@ export default function Skills() {
                 <Box sx={{ flexGrow: 1 }}>
                     <Grid container spacing={2}>
                         {skills.languages.map((item) => (
-                            <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={item.name}>
+                            <Grid item xs={12} sm={6} md={4} lg={3} key={item.name}>
                                 <Card sx={{ height: '100%', borderRadius: 5 }} elevation={3}>
                                     <CardContent>
                                         <div style={{ display: 'flex', alignItems: 'end' }}>
