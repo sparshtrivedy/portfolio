@@ -21,7 +21,12 @@ import {
     ImageListItemBar,
     IconButton,
     ListItemAvatar,
-    Divider
+    Divider,
+    MenuItem,
+    Select,
+    FormControl,
+    InputLabel,
+    TextField,
 } from '@mui/material';
 import picturelist from '../../data/picturelist';
 import {
@@ -30,7 +35,8 @@ import {
     GitHub,
     Instagram,
     ContactPage,
-    LocationOn
+    LocationOn,
+    Search,
 } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
 import PropTypes from 'prop-types';
@@ -165,10 +171,18 @@ function a11yProps(index) {
 const About = () => {
     const backgroundImage = 'https://lh3.googleusercontent.com/D3-OahttrL-yH62XV-Ss1HzQWT1RaCeAowh_b24TSPUbfilOv559cGrzrExTklxin0oOrZ4RlyPYe85coUMZDSTCqgMOlsofyLm3RKFzhwONddZRf8X_=w2400-rj';
     const [value, setValue] = React.useState(0);
+    const [search, setSearch] = React.useState('');
+    const [type, setType] = React.useState(10);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     }
+
+    const TagMap = {
+        10: 'All',
+        20: 'Technical',
+        30: 'Fictional',
+    };
     
     return (
         <Box sx={{bgcolor: 'background.main', margin: 0}}>
@@ -218,7 +232,43 @@ const About = () => {
                         When I'm not immersed in code, I like to explore the outdoors and try out new cafes. I have also learnt Tabla, an Indian classical instrument for over 9 years and have even played at several venues.
                     </Typography>
                 </Paper>
-                {writings.map((writing) => (
+                <Paper component="form" elevation={3} sx={{ marginY: 2, padding: 4, borderRadius: 5, width: 'auto', display: 'flex', alignItems: 'center' }}>
+                    <FormControl>
+                        <InputLabel id="demo-simple-select-label">Tag</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={type}
+                            label="Type"
+                            onChange={(e) => setType(e.target.value)}
+                        >
+                            <MenuItem value={10}>All</MenuItem>
+                            <MenuItem value={20}>Technical</MenuItem>
+                            <MenuItem value={30}>Fictional</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <TextField
+                        sx={{ ml: 1, flexGrow: 1, borderRadius: 5 }}
+                        placeholder="Search Posts"
+                        label="Search"
+                        variant="outlined"
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
+                    <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+                        <Search />
+                    </IconButton>
+                </Paper>
+                {writings
+                .filter((writing) => {
+                    if (type === 10 && writing.title.toLowerCase().includes(search.trim().toLowerCase())) {
+                        return writing;
+                    } else if (writing.tag === TagMap[type] && writing.title.toLowerCase().includes(search.trim().toLowerCase())) {
+                        return writing;
+                    } else {
+                        return null;
+                    }
+                })
+                .map((writing) => (
                     <WritingCard 
                         key={writing.id}
                         image={writing.image}
