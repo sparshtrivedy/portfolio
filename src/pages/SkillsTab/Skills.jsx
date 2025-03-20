@@ -97,7 +97,7 @@ export default function Skills() {
                         <Tab label="Database" {...a11yProps(3)} />
                         <Tab label="Cloud" {...a11yProps(4)} />
                         <Tab label="ML / Data Analysis" {...a11yProps(5)} />
-                        <Tab label="Overarching" {...a11yProps(6)} />
+                        {/* <Tab label="Overarching" {...a11yProps(6)} /> */}
                     </Tabs>
                 </Box>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider', display: { sm: 'none', xs: 'block' } }}>

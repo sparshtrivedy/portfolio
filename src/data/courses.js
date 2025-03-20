@@ -93,9 +93,24 @@ const courses = [
 
 const currentTerm = [
     {
-        title: 'CPSC 398',
-        description: 'Cooperative Work Placement III',
-        term: '2024S'
+        title: 'CPSC 416',
+        description: 'Distributed Systems',
+        term: '2024W2'
+    },
+    {
+        title: 'CPSC 340',
+        description: 'Machine Learning and Data Mining',
+        term: '2024W2'
+    },
+    {
+        title: 'CPSC 447',
+        description: 'Introduction to Visualization',
+        term: '2024W2'
+    },
+    {
+        title: 'STAT 302',
+        description: 'Introduction to Probability',
+        term: '2024W2'
     }
 ]
 

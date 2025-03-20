@@ -48,7 +48,7 @@ export default function Education() {
                                         University of British Columbia
                                     </Typography>
                                     <Typography color="text.secondary">
-                                        B.S. Computer Science {bull} Year 3
+                                        B.S. Computer Science {bull} Final Year
                                     </Typography>
                                 </Box>
                             </Box>

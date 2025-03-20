@@ -1,13 +1,15 @@
 const experiences = [
     {
-        id: 'tegus-swe',
-        duration: 'May 2024 - present',
+        id: 'as-swe',
+        duration: 'May 2024 - Dec 2024',
         title: 'Software Engineer Co-op',
-        location: 'Tegus',
+        location: 'AlphaSense',
         description: [
-            'Developing and maintaining excel add-in, enabling investors to update their customized models with the latest company data right in Excel.',
+            'Boosted user efficiency by developing a shortcut for splitting and merging financial earnings tables, automatically resolving conflicts and reducing modification time from ∼ 20 mins to just a click of a button.',
+            'Enhanced financial model accuracy by implementing automated validation and self-correction to fix human errors, ensuring accurate JSON conversion and seamless model uploads.',
+            'Streamlined release processes by automating the creation of release notes, saving ∼ 30 mins per cycle and ensuring consistent updates to project and solutions managers in Slack.'
         ],
-        skills: ['.NET, C#, React.js, TypeScript']
+        skills: ['C#, TypeScript, React, Python, .NET, AWS']
     },
     {
         id: 'ubc-cs-ta',
@@ -24,7 +26,7 @@ const experiences = [
     {
         id: 'forestry-web-dev',
         duration: 'May 2023 - Aug 2023',
-        title: 'Web Developer',
+        title: 'Learning Tech Rover',
         location: 'Faculty of Forestry @ UBC',
         description: [
             'Designed and implemented student dashboard for TA application portal, showcasing application analytics through interactive charts and graphs for enhanced data visualization.',

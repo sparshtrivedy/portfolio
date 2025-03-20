@@ -40,6 +40,10 @@ const skills = {
             color: '#007acc',
             demonstrated: [
                 {
+                    name: 'AlphaSense',
+                    link: '/#/experience/#as-swe'
+                },
+                {
                     name: 'WoodWorks',
                     link: '/#/projects/#woodworks'
                 },
@@ -54,6 +58,10 @@ const skills = {
             img: <SiPython />,
             color: '#306998',
             demonstrated: [
+                {
+                    name: 'AlphaSense',
+                    link: '/#/experience/#as-swe'
+                },
                 {
                     name: 'UBC CS Department',
                     link: '/#/experience/#ubc-cs-ta'
@@ -80,6 +88,10 @@ const skills = {
             img: <SiCsharp />,
             color: '#9b4993',
             demonstrated: [
+                {
+                    name: 'AlphaSense',
+                    link: '/#/experience/#as-swe'
+                },
                 {
                     name: 'WoodWorks',
                     link: '/#/projects/#woodworks'
@@ -149,6 +161,10 @@ const skills = {
             img: <SiDotnet />,
             color: '#512bd4',
             demonstrated: [
+                {
+                    name: 'AlphaSense',
+                    link: '/#/experience/#as-swe'
+                },
                 {
                     name: 'WoodWorks',
                     link: '/#/projects/#woodworks'
@@ -240,6 +256,10 @@ const skills = {
             color: '#61dafb',
             demonstrated: [
                 {
+                    name: 'AlphaSense',
+                    link: '/#/experience/#as-swe'
+                },
+                {
                     name: 'PlayBook',
                     link: '/#/projects/#playbook'
                 },
@@ -318,6 +338,10 @@ const skills = {
             img: <SiAmazonaws />,
             color: '#232f3e',
             demonstrated: [
+                {
+                    name: 'AlphaSense',
+                    link: '/#/experience/#as-swe'
+                },
                 {
                     name: 'Notes REST API',
                     link: '/#/projects/#notesapi'

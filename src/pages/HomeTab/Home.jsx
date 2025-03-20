@@ -60,8 +60,8 @@ export default function TitleCard()  {
                     </Fade>
                 }
                 {isSm?
-                    <Typography variant='h5' sx={{fontWeight: 500, color: '#212121'}}>I am a software developer</Typography>:
-                    <Typography variant='h5' sx={{fontWeight: 500, color: '#212121', fontSize: '1.2rem'}}>I am a software developer</Typography>
+                    <Typography variant='h5' sx={{fontWeight: 500, color: '#212121'}}>Computer Science @ UBC</Typography>:
+                    <Typography variant='h5' sx={{fontWeight: 500, color: '#212121', fontSize: '1.2rem'}}>Computer Science @ UBC</Typography>
                 }
             </Paper>
         </Box>

@@ -3,15 +3,15 @@ import ubc from '../assets/images/ubc.jpeg';
 import fof from '../assets/images/fof.jpeg';
 import bgc from '../assets/images/bgc.jpeg';
 import browns from '../assets/images/browns.png';
-import tegus from '../assets/images/tegus.jpeg';
+import as from '../assets/images/alphasense_logo.jpeg';
 
 const experiencestimeline = [
     {
-      id: 'tegus-swe',
-      duration: 'May 2024 - Present',
+      id: 'as-swe',
+      duration: 'May 2024 - Dec 2024',
       title: 'SWE Co-op',
-      location: 'Tegus',
-      icon: <Avatar alt='tegus logo' src={tegus} sx={{ width: '3em', height: '3em' }} />,
+      location: 'AlphaSense',
+      icon: <Avatar alt='alphasense logo' src={as} sx={{ width: '3em', height: '3em' }} />,
     },
     {
       id: 'ubc-cs-ta',
@@ -23,7 +23,7 @@ const experiencestimeline = [
     {
       id: 'forestry-web-dev',
       duration: 'May 2023 - Aug 2023',
-      title: 'Web Developer',
+      title: 'Learning Tech Rover',
       location: 'Faculty of Forestry @ UBC',
       icon: <Avatar alt='fof logo' src={fof} sx={{ width: '3em', height: '3em' }} />,
     },

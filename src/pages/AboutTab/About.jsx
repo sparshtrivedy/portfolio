@@ -42,7 +42,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import PropTypes from 'prop-types';
 import peep from '../../assets/images/peep.jpeg';
 import Connect from '../ConnectTab/Connect';
-import tegus from '../../assets/images/tegus.jpeg';
+// import as from '../../assets/images/alphasense_logo.jpeg';
 import ubc from '../../assets/images/ubc.jpeg';
 import WritingCard from '../WritingsTab/WritingCard';
 import { writings } from "../../data/writings";
@@ -112,14 +112,14 @@ function CustomTabPanel(props) {
                                 <Typography variant='h5'>Current</Typography>
                                 <Divider sx={{ marginY: 2 }} />
                                 <List>
-                                    <ListItem disablePadding>
+                                    {/* <ListItem disablePadding>
                                         <ListItemButton sx={{ display: 'flex', justifyContent: 'center', borderRadius: 5, padding: 2 }}>
                                             <ListItemAvatar>
-                                                <Avatar alt='Tegus' src={tegus} variant='rounded' />
+                                                <Avatar alt='AlphaSense' src={as} variant='rounded' />
                                             </ListItemAvatar>
-                                            <ListItemText primary="Tegus" />
+                                            <ListItemText primary="AlphaSense" />
                                         </ListItemButton>
-                                    </ListItem>
+                                    </ListItem> */}
                                     <ListItem disablePadding>
                                         <ListItemButton sx={{ display: 'flex', justifyContent: 'center', borderRadius: 5, padding: 2 }}>
                                             <ListItemAvatar>
@@ -206,7 +206,7 @@ const About = () => {
                         Sparsh Trivedy
                     </Typography>
                     <Typography variant="body2" color="textSecondary" className="bio">
-                        SWE Co-op at Tegus | UBC CS '25
+                        Senior CS Student @ UBC
                     </Typography>
                     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" variant="fullWidth" sx={{ marginY: 2 }}>
                         <Tab label="About" {...a11yProps(0)} />
@@ -222,7 +222,7 @@ const About = () => {
                     </Typography>
                     <Divider sx={{ marginY: 2 }} />
                     <Typography variant="body1" color="textSecondary" sx={{ marginTop: 2 }}>
-                        Hello, my name is Sparsh and I am a 3rd year CS major at UBC, where I am currently a TA for an Applied Machine Learning course.
+                        Hello, my name is Sparsh and I am a final year CS major at UBC, where I am currently a TA for an Applied Machine Learning course.
                         I find joy in learning new technologies and using them to build cool projects! My self-learning is driven by a curiosity to explore new things.
                     </Typography>
                     <Typography variant="body1" color="textSecondary" sx={{ marginTop: 2 }}>

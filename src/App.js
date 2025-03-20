@@ -49,10 +49,6 @@ function App() {
         }
     }),[]);
 
-    React.useEffect(() => {
-        console.log(document.querySelectorAll("p * div"));
-    }, []);
-
     const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
     return (
