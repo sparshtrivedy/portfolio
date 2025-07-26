@@ -1,0 +1,34 @@
+<svg
+        width="128"
+        height="128"
+        viewBox="0 0 128 128"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="ST logo"
+>
+    <!-- Gradient -->
+    <defs>
+        <linearGradient id="stGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB" /> <!-- Tailwind blue‑600 -->
+            <stop offset="100%" stop-color="#8B5CF6" /> <!-- Tailwind purple‑600 -->
+        </linearGradient>
+    </defs>
+
+    <!-- Rounded square background -->
+    <rect width="128" height="128" rx="18" fill="url(#stGradient)" />
+
+    <!-- Initials (sleek geometric font‑style via system stack) -->
+    <text
+            x="50%"
+            y="57%"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif"
+            font-weight="600"
+            font-size="72"
+            letter-spacing="5"
+            fill="white"
+    >
+        ST
+    </text>
+</svg>
