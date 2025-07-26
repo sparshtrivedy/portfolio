@@ -3,12 +3,20 @@ import {
     AppBar,
     Toolbar,
     Button,
-    Box
+    Box,
+    IconButton,
+    useTheme,
+    useMediaQuery
 } from '@mui/material';
 import { blue, grey } from "@mui/material/colors";
+import { Menu } from '@mui/icons-material';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     const navItems = [
         { id: 'home', label: 'Home' },
         { id: 'about', label: 'About' },
@@ -19,63 +27,119 @@ const Navbar = () => {
     ];
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 10);
-        };
-
+        const handleScroll = () => setScrolled(window.scrollY > 10);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(open => !open);
+    };
+
+    const handleNavClick = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+        if (isMobile) setMobileMenuOpen(false);
+    };
+
     return (
-        <AppBar
-            position="fixed"
-            elevation={scrolled ? 4 : 0}
-            sx={{
-                backgroundColor: scrolled ? 'rgba(255, 255, 255, 1.0)' : 'transparent',
-                transition: 'all 0.3s ease',
-                color: '#fff',
-                top: 0,
-                left: 0,
-                zIndex: 10,
-            }}
-        >
-            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                <h1 className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-2xl font-semibold">
-                    Sparsh Trivedy
-                </h1>
-                <Box>
-                    {navItems.map((item) => (
+        <Box sx={{ position: 'relative' }}>
+            <AppBar
+                position="fixed"
+                elevation={scrolled ? 4 : 0}
+                sx={{
+                    backgroundColor: scrolled ? '#fff' : 'transparent',
+                    transition: 'all 0.3s ease',
+                    color: '#333',
+                }}
+            >
+                <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', px: 3 }}>
+                    <Box
+                        component="h1"
+                        sx={{
+                            fontSize: '1.5rem',
+                            fontWeight: 600,
+                            background: 'linear-gradient(to right, #3b82f6, #8b5cf6)',
+                            WebkitBackgroundClip: 'text',
+                            color: 'transparent'
+                        }}
+                    >
+                        Sparsh Trivedy
+                    </Box>
+
+                    {/* Desktop links */}
+                    {!isMobile && (
+                        <Box>
+                            {navItems.map(({ id, label }) => (
+                                <Button
+                                    key={id}
+                                    onClick={() => handleNavClick(id)}
+                                    sx={{
+                                        ml: 2,
+                                        textTransform: 'none',
+                                        fontWeight: 500,
+                                        fontSize: '1rem',
+                                        color: grey[700],
+                                        '&:hover': { color: 'primary.main' },
+                                        '&:active': {
+                                            color: blue[700],
+                                            backgroundColor: 'rgba(33, 150, 243, 0.3)',
+                                        },
+                                    }}
+                                >
+                                    {label}
+                                </Button>
+                            ))}
+                        </Box>
+                    )}
+
+                    {/* Mobile hamburger */}
+                    {isMobile && (
+                        <IconButton
+                            edge="end"
+                            color="inherit"
+                            onClick={toggleMobileMenu}
+                        >
+                            <Menu />
+                        </IconButton>
+                    )}
+                </Toolbar>
+            </AppBar>
+
+            {/* Mobile dropdown */}
+            {isMobile && mobileMenuOpen && (
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: '64px',         // height of AppBar
+                        right: 0,
+                        width: 200,
+                        bgcolor: '#fff',
+                        boxShadow: 3,
+                        borderRadius: 1,
+                        zIndex: 11
+                    }}
+                >
+                    {navItems.map(({ id, label }) => (
                         <Button
-                            key={item.id}
-                            color="primary"
+                            key={id}
+                            fullWidth
+                            onClick={() => handleNavClick(id)}
                             sx={{
-                                marginLeft: 2,
+                                justifyContent: 'flex-start',
                                 textTransform: 'none',
-                                fontWeight: 500,
-                                fontSize: '1rem',
-                                color: grey[700],
-                                '&:hover': {
-                                    color: 'primary.main',
-                                },
-                                '&:active': {
-                                    color: blue[700],
-                                    backgroundColor: 'rgba(33, 150, 243, 0.3)',
-                                },
-                            }}
-                            onClick={() => {
-                                const section = document.getElementById(item.id);
-                                if (section) {
-                                    section.scrollIntoView({ behavior: 'smooth' });
-                                }
+                                color: grey[800],
+                                px: 2,
+                                py: 1,
+                                '&:hover': { backgroundColor: 'rgba(0,0,0,0.04)' }
                             }}
                         >
-                            {item.label}
+                            {label}
                         </Button>
                     ))}
                 </Box>
-            </Toolbar>
-        </AppBar>
+            )}
+        </Box>
     );
 };
 

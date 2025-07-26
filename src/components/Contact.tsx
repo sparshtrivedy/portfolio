@@ -7,6 +7,7 @@ import {
     Typography
 } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import resume from "../assets/Sparsh_Trivedy_SWE_Resume_2025.pdf";
 
 const Contact = () => {
     return (
@@ -166,10 +167,11 @@ const Contact = () => {
                                 fontSize: "0.85rem",
                                 mt: 2,
                             }}
-                            onClick={() => {
-                                window.open('https://github.com/sparshtrivedy');
-                            }}
                             endIcon={<OpenInNewOutlined />}
+                            href={resume}
+                            target="_blank"
+                            download="Sparsh_Trivedy_SWE_Resume_2025.pdf"
+                            rel="noopener noreferrer"
                         >
                             Download Resume
                         </Button>

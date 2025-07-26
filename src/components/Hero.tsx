@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import { ExpandMore, FileDownloadOutlined } from "@mui/icons-material";
 import { grey } from "@mui/material/colors";
+import resume from "../assets/Sparsh_Trivedy_SWE_Resume_2025.pdf"
 
 const Hero = () => {
     const titles = [
@@ -37,8 +38,7 @@ const Hero = () => {
     }, [displayText, isDeleting, currentTitleIndex]);
 
     return (
-        <Box sx={{ position: "relative", overflow: "hidden", height: "100vh" }}>
-            {/* Background */}
+        <Box id={"home"} sx={{ position: "relative", overflow: "hidden", height: "100vh" }}>
             <Box
                 sx={{
                     position: "absolute",
@@ -110,25 +110,26 @@ const Hero = () => {
                     textAlign: "center",
                     position: "relative",
                     zIndex: 1,
+                    padding: "0 2rem",
                 }}
             >
-                <Typography variant="h1" sx={{ fontSize: "5rem", marginBottom: "2rem", fontWeight: 600 }}>
+                <Typography variant="h1" sx={{ fontSize: "4rem", marginBottom: "1.75rem", fontWeight: 600 }}>
                     Hi, I'm{' '}
                     <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         Sparsh Trivedy
                     </span>
                 </Typography>
-                <Typography variant="h2" sx={{ fontSize: "2rem", color: "text.secondary", fontWeight: 500 }} className="flex items-center justify-center">
+                <Typography variant="h2" sx={{ fontSize: "1.5rem", color: "text.secondary", fontWeight: 500 }} className="flex items-center justify-center">
                     I'm a
                     <span className="text-blue-600 font-semibold ml-2">
                         {displayText}
                         <span className="animate-pulse ml-1">|</span>
                     </span>
                 </Typography>
-                <Typography variant="body1" sx={{ marginTop: "2rem", maxWidth: "600px", color: "text.secondary", fontSize: "1.2rem" }}>
+                <Typography variant="body1" sx={{ marginTop: "1.5rem", maxWidth: "600px", color: "text.secondary", fontSize: "1.1rem" }}>
                     I am a CS senior at UBC with a keen interest in building innovative solutions. I love coding, learning new technologies, and collaborating on exciting projects.
                 </Typography>
-                <Box sx={{ marginTop: "2rem" }}>
+                <Box sx={{ marginTop: "2rem", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
                     <Button
                         variant="contained"
                         className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center space-x-2"
@@ -141,6 +142,10 @@ const Hero = () => {
                             mr: 2,
                         }}
                         startIcon={<FileDownloadOutlined fontSize="large" />}
+                        href={resume}
+                        target="_blank"
+                        download="Sparsh_Trivedy_SWE_Resume_2025.pdf"
+                        rel="noopener noreferrer"
                     >
                         Download Resume
                     </Button>
@@ -170,7 +175,10 @@ const Hero = () => {
                 }}
             >
                 <p style={{ fontSize: "1rem" }}>Scroll down to explore more</p>
-                <IconButton sx={{ animation: "bounce 1s infinite", color: grey[500], mt: 1 }}>
+                <IconButton
+                    sx={{ animation: "bounce 1s infinite", color: grey[500], mt: 1 }}
+                    onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
+                >
                     <ExpandMore fontSize="large" />
                 </IconButton>
             </Box>
