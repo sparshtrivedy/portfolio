@@ -14,11 +14,13 @@ const Experience = () => {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
+                    justifyContent: 'center',
                     alignItems: 'center',
                     paddingTop: '4rem',
+                    px: '1rem',
                 }}
             >
-                <Typography sx={{ fontSize: '2.5rem', fontWeight: 600, marginBottom: '1rem' }}>
+                <Typography sx={{ fontSize: '2.5rem', fontWeight: 600, marginBottom: '1rem', textAlign: 'center' }}>
                     Experience & Education
                 </Typography>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8 rounded-2xl"></div>
