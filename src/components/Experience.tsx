@@ -52,7 +52,10 @@ const Experience = () => {
                             p: 3,
                             borderRadius: 2,
                             borderLeft: '5px solid #0070f3',
-                            mb: 3
+                            mb: 3,
+                            '&:hover': {
+                                boxShadow: 5,
+                            }
                         }}
                     >
                         <Typography variant="body1" sx={{ color: grey[800], mb: 1, fontWeight: 600, fontSize: '1.1rem' }}>
@@ -108,7 +111,10 @@ const Experience = () => {
                             p: 3,
                             borderRadius: 2,
                             borderLeft: '5px solid #0070f3',
-                            mb: 3
+                            mb: 3,
+                            '&:hover': {
+                                boxShadow: 5,
+                            }
                         }}
                     >
                         <Typography variant="body1" sx={{ color: grey[800], mb: 1, fontWeight: 600, fontSize: '1.1rem' }}>
@@ -164,7 +170,10 @@ const Experience = () => {
                             p: 3,
                             borderRadius: 2,
                             borderLeft: '5px solid #0070f3',
-                            mb: 3
+                            mb: 3,
+                            '&:hover': {
+                                boxShadow: 5,
+                            }
                         }}
                     >
                         <Typography variant="body1" sx={{ color: grey[800], mb: 1, fontWeight: 600, fontSize: '1.1rem' }}>
@@ -219,7 +228,10 @@ const Experience = () => {
                             p: 3,
                             borderRadius: 2,
                             borderLeft: '5px solid #0070f3',
-                            mb: 3
+                            mb: 3,
+                            '&:hover': {
+                                boxShadow: 5,
+                            }
                         }}
                     >
                         <Typography variant="body1" sx={{ color: grey[800], mb: 1, fontWeight: 600, fontSize: '1.1rem' }}>
@@ -273,7 +285,10 @@ const Experience = () => {
                             p: 3,
                             borderRadius: 2,
                             borderLeft: '5px solid #0070f3',
-                            mb: 3
+                            mb: 3,
+                            '&:hover': {
+                                boxShadow: 5,
+                            }
                         }}
                     >
                         <Typography variant="body1" sx={{ color: grey[800], mb: 1, fontWeight: 600, fontSize: '1.1rem' }}>
@@ -337,7 +352,10 @@ const Experience = () => {
                         sx={{
                             p: 3,
                             borderRadius: 2,
-                            mb: 3
+                            mb: 3,
+                            '&:hover': {
+                                boxShadow: 5,
+                            }
                         }}
                     >
                         <Typography variant="body1" sx={{ color: grey[800], mb: 1, fontWeight: 600, fontSize: '1.1rem' }}>

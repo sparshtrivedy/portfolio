@@ -6,7 +6,7 @@ import {
     Paper,
     Typography
 } from "@mui/material";
-import { grey } from "@mui/material/colors";
+import {blue, grey} from "@mui/material/colors";
 import resume from "../assets/Sparsh_Trivedy_SWE_Resume_2025.pdf";
 
 const Contact = () => {
@@ -60,7 +60,7 @@ const Contact = () => {
             </Grid>
             <Grid
                 container
-                spacing={4}
+                spacing={2}
                 columns={12}
                 sx={{ mx: 'auto', px: 2, alignItems: 'center', justifyContent: 'center' }}
             >
@@ -72,10 +72,18 @@ const Contact = () => {
                             padding: 1,
                             borderRadius: 2,
                             backgroundColor: grey[100],
+                            '&:hover': {
+                                bgcolor: blue[50],
+                                border: '1px solid #0070f3',
+                                '& .icon-container': {
+                                    transform: 'scale(1.1)',
+                                    transition: 'transform 0.3s ease',
+                                }
+                            }
                         }}
                         elevation={0}
                     >
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2 icon-container">
                             <EmailOutlined sx={{ fontSize: 28, color: 'white' }} />
                         </div>
                         <Box sx={{ display: 'flex', flexDirection: 'column', ml: 1 }}>
@@ -96,10 +104,18 @@ const Contact = () => {
                             padding: 1,
                             borderRadius: 2,
                             backgroundColor: grey[100],
+                            '&:hover': {
+                                bgcolor: blue[50],
+                                border: '1px solid #0070f3',
+                                '& .icon-container': {
+                                    transform: 'scale(1.1)',
+                                    transition: 'transform 0.3s ease',
+                                }
+                            }
                         }}
                         elevation={0}
                     >
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2 icon-container">
                             <RoomOutlined sx={{ fontSize: 28, color: 'white' }} />
                         </div>
                         <Box sx={{ display: 'flex', flexDirection: 'column', ml: 1 }}>
@@ -128,19 +144,19 @@ const Contact = () => {
                     </Typography>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
                         <div
-                            className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-2 hover:bg-gray-300 hover:cursor-pointer"
+                            className={`p-3 bg-gray-100 rounded-lg text-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-md hover:text-blue-500 mr-3`}
                             onClick={() => window.open('https://www.linkedin.com/in/sparshtrivedy/', '_blank')}
                         >
                             <Linkedin />
                         </div>
                         <div
-                            className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-2 hover:bg-gray-300 hover:cursor-pointer"
+                            className={`p-3 bg-gray-100 rounded-lg text-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-md hover:text-gray-800 mr-3`}
                             onClick={() => window.open('https://github.com/sparshtrivedy', '_blank')}
                         >
                             <Github />
                         </div>
                         <div
-                            className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-2 hover:bg-gray-300 hover:cursor-pointer"
+                            className={`p-3 bg-gray-100 rounded-lg text-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-md hover:text-purple-500`}
                             onClick={() => window.open('https://www.instagram.com/sparshtrivedy/', '_blank')}
                         >
                             <Instagram />

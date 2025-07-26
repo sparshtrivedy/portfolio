@@ -42,13 +42,12 @@ const About = () => {
                 <Grid size={{ xs: 12, md: 5, lg: 4 }}>
                     <div className="relative">
                         <div className="w-full h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-                            <Avatar src={sparsh} alt="Sparsh Trivedy" sx={{ width: 150, height: 150, border: '4px solid #fff', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' }} />
+                            <Avatar src={sparsh} alt="Sparsh Trivedy" sx={{ width: 200, height: 200, border: '4px solid #fff', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)' }} />
                         </div>
                         <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl opacity-20"></div>
                         <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl opacity-20"></div>
                     </div>
                 </Grid>
-
                 <Grid size={{ xs: 12, md: 5, lg: 6 }} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <Box sx={{ width: '100%', maxWidth: '600px' }}>
                         <Typography sx={{ fontSize: '1.1rem', color: grey[700], lineHeight: 1.6 }}>
@@ -65,9 +64,23 @@ const About = () => {
 
                         <Grid container spacing={2} columns={12} sx={{ mt: 3 }}>
                             <Grid size={{ xs: 12, sm: 6 }}>
-                                <Box sx={{ border: '1px solid #e0e0e0', p: 3, borderRadius: 2, height: '100%' }}>
+                                <Box sx={{
+                                    border: '1px solid #e0e0e0',
+                                    p: 3,
+                                    borderRadius: 2,
+                                    height: '100%',
+                                    '&:hover': {
+                                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                        border: '1px solid oklch(0.623 0.214 259.815)',
+                                        '& .icon-container': {
+                                            transform: 'scale(1.1)',
+                                            transition: 'transform 0.3s ease',
+                                        },
+                                    }
+                                }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2 icon-container">
                                             <CodeOutlined sx={{ fontSize: 32, color: 'white' }} />
                                         </div>
                                         <h6 className="text-lg font-semibold text-gray-800">
@@ -80,9 +93,23 @@ const About = () => {
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6 }}>
-                                <Box sx={{ border: '1px solid #e0e0e0', p: 3, borderRadius: 2, height: '100%' }}>
+                                <Box sx={{
+                                    border: '1px solid #e0e0e0',
+                                    p: 3,
+                                    borderRadius: 2,
+                                    height: '100%',
+                                    '&:hover': {
+                                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                        border: '1px solid oklch(0.623 0.214 259.815)',
+                                        '& .icon-container': {
+                                            transform: 'scale(1.1)',
+                                            transition: 'transform 0.3s ease',
+                                        },
+                                    }
+                                }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2 icon-container">
                                             <SchoolOutlined sx={{ fontSize: 32, color: 'white' }} />
                                         </div>
                                         <h6 className="text-lg font-semibold text-gray-800">
@@ -95,9 +122,23 @@ const About = () => {
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6 }}>
-                                <Box sx={{ border: '1px solid #e0e0e0', p: 3, borderRadius: 2, height: '100%' }}>
+                                <Box sx={{
+                                    border: '1px solid #e0e0e0',
+                                    p: 3,
+                                    borderRadius: 2,
+                                    height: '100%',
+                                    '&:hover': {
+                                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                        border: '1px solid oklch(0.623 0.214 259.815)',
+                                        '& .icon-container': {
+                                            transform: 'scale(1.1)',
+                                            transition: 'transform 0.3s ease',
+                                        },
+                                    }
+                                }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2 icon-container">
                                             <AdjustOutlined sx={{ fontSize: 32, color: 'white' }} />
                                         </div>
                                         <h6 className="text-lg font-semibold text-gray-800">
@@ -110,9 +151,23 @@ const About = () => {
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 12, sm: 6 }}>
-                                <Box sx={{ border: '1px solid #e0e0e0', p: 3, borderRadius: 2, height: '100%' }}>
+                                <Box sx={{
+                                    border: '1px solid #e0e0e0',
+                                    p: 3,
+                                    borderRadius: 2,
+                                    height: '100%',
+                                    '&:hover': {
+                                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                        border: '1px solid oklch(0.623 0.214 259.815)',
+                                        '& .icon-container': {
+                                            transform: 'scale(1.1)',
+                                            transition: 'transform 0.3s ease',
+                                        },
+                                    }
+                                }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                                        <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2 icon-container">
                                             <PeopleAltOutlined sx={{ fontSize: 32, color: 'white' }} />
                                         </div>
                                         <h6 className="text-lg font-semibold text-gray-800">

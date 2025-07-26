@@ -90,7 +90,14 @@ const Skills = () => {
                     { title: 'Frameworks & Libraries',   items: frameworks },
                 ].map((cat) => (
                     <Grid key={cat.title} size={{ xs: 12, md: 5 }}>
-                        <Paper sx={{ p: 3, borderRadius: 2 }}>
+                        <Paper sx={{
+                            p: 3,
+                            borderRadius: 2,
+                            '&:hover': {
+                                boxShadow: 3,
+                                transition: 'transform 0.2s, box-shadow 0.2s',
+                            }
+                        }}>
                             <Typography
                                 variant="h6"
                                 sx={{ fontWeight: 600, color: grey[800], mb: 2, textAlign: 'center' }}
@@ -142,7 +149,14 @@ const Skills = () => {
                     { title: 'Tools & Others',      items: tools },
                 ].map((cat) => (
                     <Grid key={cat.title} size={{ xs: 12, md: 5 }}>
-                        <Paper sx={{ p: 3, borderRadius: 2 }}>
+                        <Paper sx={{
+                            p: 3,
+                            borderRadius: 2,
+                            '&:hover': {
+                                boxShadow: 3,
+                                transition: 'transform 0.2s, box-shadow 0.2s',
+                            }
+                        }}>
                             <Typography
                                 variant="h6"
                                 sx={{ fontWeight: 600, color: grey[800], mb: 2, textAlign: 'center' }}

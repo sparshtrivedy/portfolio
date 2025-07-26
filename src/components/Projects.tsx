@@ -50,6 +50,14 @@ const Projects = () => {
                             height: '100%',
                             borderRadius: 3,
                             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                            '&:hover': {
+                                boxShadow: '0 8px 40px rgba(0, 0, 0, 0.2)',
+                                transform: 'scale(1.02)',
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                '& .project-title': {
+                                    color: 'oklch(0.546 0.245 262.881)'
+                                }
+                            }
                         }}
                     >
                         <CardMedia
@@ -60,7 +68,7 @@ const Projects = () => {
                             sx={{ borderRadius: 1, marginBottom: 2 }}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 600, color: grey[800] }}>
+                            <Typography gutterBottom className="project-title" variant="h5" component="div" sx={{ fontWeight: 600, color: grey[800] }}>
                                 ConnectUBC
                             </Typography>
                             <Typography
@@ -72,7 +80,7 @@ const Projects = () => {
                                     lineHeight: 1.5,
                                     listStyleType: 'disc',
                                     pl: 4,
-                                    m: 0,           // remove default margins
+                                    m: 0,
                                 }}
                             >
                                 <li>Built an AI‑powered RAG chatbot using Gemini’s LLM and MongoDB Atlas vector search, to enable natural‑language queries—cutting content‑discovery time by ∼70%.</li>
@@ -88,7 +96,7 @@ const Projects = () => {
                                             label={tech}
                                             sx={{
                                                 backgroundColor: blue[50],
-                                                color: blue[800],
+                                                color: 'oklch(0.546 0.245 262.881)',
                                                 fontWeight: 500,
                                                 borderRadius: 5,
                                                 fontSize: '0.875rem',
@@ -108,6 +116,14 @@ const Projects = () => {
                             height: '100%',
                             borderRadius: 3,
                             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                            '&:hover': {
+                                boxShadow: '0 8px 40px rgba(0, 0, 0, 0.2)',
+                                transform: 'scale(1.02)',
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                '& .project-title': {
+                                    color: 'oklch(0.546 0.245 262.881)'
+                                }
+                            }
                         }}
                     >
                         <CardMedia
@@ -118,7 +134,13 @@ const Projects = () => {
                             sx={{ borderRadius: 1, marginBottom: 2 }}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 600, color: grey[800] }}>
+                            <Typography
+                                gutterBottom
+                                variant="h5"
+                                component="div"
+                                className="project-title"
+                                sx={{ fontWeight: 600, color: grey[800] }}
+                            >
                                 FairFare
                             </Typography>
                             <Typography
@@ -130,7 +152,7 @@ const Projects = () => {
                                     lineHeight: 1.5,
                                     listStyleType: 'disc',
                                     pl: 4,
-                                    m: 0,           // remove default margins
+                                    m: 0,
                                 }}
                             >
                                 <li>Eliminated need for manual bill splitting by delivering a mobile-responsive React+Firebase serverless app that auto-calculates shares for both single purchases and multi-item events, then syncs settled payments.</li>
@@ -144,7 +166,7 @@ const Projects = () => {
                                             label={tech}
                                             sx={{
                                                 backgroundColor: blue[50],
-                                                color: blue[800],
+                                                color: 'oklch(0.546 0.245 262.881)',
                                                 fontWeight: 500,
                                                 borderRadius: 5,
                                                 fontSize: '0.875rem',
@@ -164,6 +186,14 @@ const Projects = () => {
                             height: '100%',
                             borderRadius: 3,
                             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                            '&:hover': {
+                                boxShadow: '0 8px 40px rgba(0, 0, 0, 0.2)',
+                                transform: 'scale(1.02)',
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                '& .project-title': {
+                                    color: 'oklch(0.546 0.245 262.881)'
+                                }
+                            }
                         }}
                     >
                         <CardMedia
@@ -174,7 +204,13 @@ const Projects = () => {
                             sx={{ borderRadius: 1, marginBottom: 2 }}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 600, color: grey[800] }}>
+                            <Typography
+                                gutterBottom
+                                variant="h5"
+                                component="div"
+                                className="project-title"
+                                sx={{ fontWeight: 600, color: grey[800] }}
+                            >
                                 PlayBook
                             </Typography>
                             <Typography
@@ -201,7 +237,7 @@ const Projects = () => {
                                             label={tech}
                                             sx={{
                                                 backgroundColor: blue[50],
-                                                color: blue[800],
+                                                color: 'oklch(0.546 0.245 262.881)',
                                                 fontWeight: 500,
                                                 borderRadius: 5,
                                                 fontSize: '0.875rem',
@@ -221,6 +257,14 @@ const Projects = () => {
                             height: '100%',
                             borderRadius: 3,
                             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                            '&:hover': {
+                                boxShadow: '0 8px 40px rgba(0, 0, 0, 0.2)',
+                                transform: 'scale(1.02)',
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                '& .project-title': {
+                                    color: 'oklch(0.546 0.245 262.881)'
+                                }
+                            }
                         }}
                     >
                         <CardMedia
@@ -231,7 +275,13 @@ const Projects = () => {
                             sx={{ borderRadius: 1, marginBottom: 2 }}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 600, color: grey[800] }}>
+                            <Typography
+                                gutterBottom
+                                variant="h5"
+                                component="div"
+                                className="project-title"
+                                sx={{ fontWeight: 600, color: grey[800] }}
+                            >
                                 Get-It-Together
                             </Typography>
                             <Typography
@@ -258,7 +308,7 @@ const Projects = () => {
                                             label={tech}
                                             sx={{
                                                 backgroundColor: blue[50],
-                                                color: blue[800],
+                                                color: 'oklch(0.546 0.245 262.881)',
                                                 fontWeight: 500,
                                                 borderRadius: 5,
                                                 fontSize: '0.875rem',
