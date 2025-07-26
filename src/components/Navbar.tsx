@@ -8,37 +8,60 @@ import {
     useTheme,
     useMediaQuery
 } from '@mui/material';
-import { blue, grey } from "@mui/material/colors";
+import {blue, grey} from "@mui/material/colors";
 import { Menu } from '@mui/icons-material';
+
+const navItems = [
+    { id: 'home',      label: 'Home' },
+    { id: 'about',     label: 'About' },
+    { id: 'skills',    label: 'Skills' },
+    { id: 'projects',  label: 'Projects' },
+    { id: 'experience',label: 'Experience' },
+    { id: 'contact',   label: 'Contact' },
+];
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState<string>(navItems[0].id);
+
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-    const navItems = [
-        { id: 'home', label: 'Home' },
-        { id: 'about', label: 'About' },
-        { id: 'skills', label: 'Skills' },
-        { id: 'projects', label: 'Projects' },
-        { id: 'experience', label: 'Experience' },
-        { id: 'contact', label: 'Contact' },
-    ];
-
-    useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 10);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(open => !open);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+
+            // Update active section based on scroll position
+            const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+            const currentSection = sections.find(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    return rect.top <= 100 && rect.bottom >= 100;
+                }
+                return false;
+            });
+
+            if (currentSection) {
+                setActiveSection(currentSection);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+
+
     const handleNavClick = (id: string) => {
         const section = document.getElementById(id);
         if (section) section.scrollIntoView({ behavior: 'smooth' });
+        setActiveSection(id);
         if (isMobile) setMobileMenuOpen(false);
     };
 
@@ -70,30 +93,31 @@ const Navbar = () => {
                     {/* Desktop links */}
                     {!isMobile && (
                         <Box>
-                            {navItems.map(({ id, label }) => (
-                                <Button
-                                    key={id}
-                                    onClick={() => handleNavClick(id)}
-                                    sx={{
-                                        ml: 2,
-                                        textTransform: 'none',
-                                        fontWeight: 500,
-                                        fontSize: '1rem',
-                                        color: grey[700],
-                                        '&:hover': { color: 'primary.main' },
-                                        '&:active': {
-                                            color: blue[700],
-                                            backgroundColor: 'rgba(33, 150, 243, 0.3)',
-                                        },
-                                    }}
-                                >
-                                    {label}
-                                </Button>
-                            ))}
+                            {navItems.map(({ id, label }) => {
+                                const isActive = id === activeSection;
+                                return (
+                                    <Button
+                                        key={id}
+                                        onClick={() => handleNavClick(id)}
+                                        size="small"
+                                        sx={{
+                                            ml: 2,
+                                            textTransform: 'none',
+                                            fontSize: '1rem',
+                                            color: isActive ? 'primary.main' : grey[700],
+                                            bgcolor: isActive ? blue[50] : 'transparent',
+                                            '&:hover': {
+                                                color: 'primary.main',
+                                                borderColor: 'primary.main',
+                                            },
+                                        }}
+                                    >
+                                        {label}
+                                    </Button>
+                                );
+                            })}
                         </Box>
                     )}
-
-                    {/* Mobile hamburger */}
                     {isMobile && (
                         <IconButton
                             edge="end"
@@ -105,38 +129,40 @@ const Navbar = () => {
                     )}
                 </Toolbar>
             </AppBar>
-
-            {/* Mobile dropdown */}
             {isMobile && mobileMenuOpen && (
                 <Box
                     sx={{
-                        position: 'absolute',
-                        top: '64px',         // height of AppBar
+                        position: 'fixed',
+                        top: '64px',
                         right: 0,
-                        width: 200,
+                        width: '100%',
                         bgcolor: '#fff',
                         boxShadow: 3,
                         borderRadius: 1,
                         zIndex: 11
                     }}
                 >
-                    {navItems.map(({ id, label }) => (
-                        <Button
-                            key={id}
-                            fullWidth
-                            onClick={() => handleNavClick(id)}
-                            sx={{
-                                justifyContent: 'flex-start',
-                                textTransform: 'none',
-                                color: grey[800],
-                                px: 2,
-                                py: 1,
-                                '&:hover': { backgroundColor: 'rgba(0,0,0,0.04)' }
-                            }}
-                        >
-                            {label}
-                        </Button>
-                    ))}
+                    {navItems.map(({ id, label }) => {
+                        const isActive = id === activeSection;
+                        return (
+                            <Button
+                                key={id}
+                                fullWidth
+                                onClick={() => handleNavClick(id)}
+                                sx={{
+                                    justifyContent: 'flex-start',
+                                    textTransform: 'none',
+                                    color: isActive ? 'primary.main' : grey[800],
+                                    bgcolor: isActive ? blue[50] : 'transparent',
+                                    px: 2,
+                                    py: 1,
+                                    '&:hover': { backgroundColor: 'rgba(0,0,0,0.04)' }
+                                }}
+                            >
+                                {label}
+                            </Button>
+                        );
+                    })}
                 </Box>
             )}
         </Box>
