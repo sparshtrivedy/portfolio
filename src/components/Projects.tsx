@@ -3,7 +3,7 @@ import {
     Typography
 } from "@mui/material";
 import {blue, grey} from "@mui/material/colors";
-import connectubc from "../assets/connectubc.png"
+import connectubc from "../assets/connectubc.jpeg"
 import fairfare from "../assets/fairfare.jpeg"
 import playbook from "../assets/playbook.jpeg";
 import get_it_together from "../assets/get-it-together.jpeg";
